@@ -1,0 +1,592 @@
+{
+    "meta": {
+      "name": "LinkedIn",
+      "version": 1,
+      "_hash": "a26c672d12b2d7195dc913e31c95b251c42d2520beb0a60c02c06e0ac0d5e669"
+    },
+    "requestInterface": [
+      {
+        "manual": {
+          "available": false
+        }
+      },
+      {
+        "webinterface": {
+          "available": true,
+          "startUrl": "https://www.linkedin.com/psettings/member-data?li_theme=light&openInMobileMode=true",
+          "authentication": "password",
+          "workflowContainer": {
+            "automationEngine": "automa",
+            "workflow": [
+              {
+                "createdAt": 1674087254401,
+                "dataColumns": [],
+                "description": "",
+                "drawflow": {
+                  "nodes": [
+                    {
+                      "computedPosition": {
+                        "x": 50,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "data": {
+                        "activeInInput": false,
+                        "contextMenuName": "",
+                        "contextTypes": [],
+                        "date": "",
+                        "days": [],
+                        "delay": 5,
+                        "description": "",
+                        "disableBlock": false,
+                        "interval": 60,
+                        "isUrlRegex": false,
+                        "observeElement": {
+                          "baseElOptions": {
+                            "attributeFilter": [],
+                            "attributes": false,
+                            "characterData": false,
+                            "childList": true,
+                            "subtree": false
+                          },
+                          "baseSelector": "",
+                          "matchPattern": "",
+                          "selector": "",
+                          "targetOptions": {
+                            "attributeFilter": [],
+                            "attributes": false,
+                            "characterData": false,
+                            "childList": true,
+                            "subtree": false
+                          }
+                        },
+                        "parameters": [],
+                        "shortcut": "",
+                        "time": "00:00",
+                        "type": "manual",
+                        "url": ""
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "Xb8i6__ce7sr1MtD1fpXL-output-1",
+                            "position": "right",
+                            "x": 196.00293114376058,
+                            "y": 27.993914694209803,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "Xb8i6__ce7sr1MtD1fpXL",
+                      "label": "trigger",
+                      "position": {
+                        "x": 50,
+                        "y": 300
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 320,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "data": {
+                        "disableBlock": false,
+                        "description": "",
+                        "url": "https://www.linkedin.com/psettings/member-data?li_theme=light&openInMobileMode=true",
+                        "userAgent": "",
+                        "active": false,
+                        "inGroup": false,
+                        "waitTabLoaded": true,
+                        "updatePrevTab": false,
+                        "customUserAgent": false
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "zMirHCF95y5MVC3NLKhct-output-1",
+                            "position": "right",
+                            "x": 196.0029103070172,
+                            "y": 27.993914694209803,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "zMirHCF95y5MVC3NLKhct-input-1",
+                            "position": "left",
+                            "x": -20.005440669041786,
+                            "y": 27.993914694209803,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "zMirHCF95y5MVC3NLKhct",
+                      "label": "new-tab",
+                      "position": {
+                        "x": 320,
+                        "y": 300
+                      },
+                      "type": "BlockBasic",
+                      "selected": false
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 587.2906229677635,
+                        "y": 201.02491114818486,
+                        "z": 0
+                      },
+                      "data": {
+                        "code": "\n            const event = (state) => new CustomEvent( '__js-event__', {\n              'detail': {\n                'type': 'to_active',\n                'data': { 'workflow_state': state }\n              }\n            });\n            if (window.location.href == \"https://www.linkedin.com/mypreferences/d/download-my-data\"){\n              window.dispatchEvent(event('started'));\n            } else {\n              window.dispatchEvent(event('start-failed'));\n            }",
+                        "context": "website",
+                        "description": "",
+                        "disableBlock": false,
+                        "everyNewTab": false,
+                        "preloadScripts": [],
+                        "runBeforeLoad": false,
+                        "timeout": 20000
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "Y_pXDr6kawnvDHWgR14HW-output-1",
+                            "position": "right",
+                            "x": 196.0029103070172,
+                            "y": 27.993914694209803,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "Y_pXDr6kawnvDHWgR14HW-input-1",
+                            "position": "left",
+                            "x": -20.005440669041786,
+                            "y": 27.993914694209803,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "Y_pXDr6kawnvDHWgR14HW",
+                      "label": "javascript-code",
+                      "position": {
+                        "x": 587.2906229677635,
+                        "y": 201.02491114818486
+                      },
+                      "type": "BlockBasic",
+                      "selected": false
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 880,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "data": {
+                        "disableBlock": false,
+                        "description": "",
+                        "findBy": "xpath",
+                        "waitForSelector": true,
+                        "waitSelectorTimeout": 5000,
+                        "selector": "//BODY/DIV[1]/FORM[1]/FIELDSET[1]/UL[1]/LI[1]/INPUT[1]",
+                        "markEl": false,
+                        "multiple": false
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "l2OPnK3ph1CkgZb4RXTWn-output-1",
+                            "position": "right",
+                            "x": 196.0029103070172,
+                            "y": 27.993914694209803,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "l2OPnK3ph1CkgZb4RXTWn-input-1",
+                            "position": "left",
+                            "x": -20.005440669041786,
+                            "y": 27.993914694209803,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "l2OPnK3ph1CkgZb4RXTWn",
+                      "label": "event-click",
+                      "position": {
+                        "x": 880,
+                        "y": 300
+                      },
+                      "type": "BlockBasic",
+                      "selected": false
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 1160,
+                        "y": 300,
+                        "z": 1000
+                      },
+                      "data": {
+                        "disableBlock": false,
+                        "description": "Request archive",
+                        "findBy": "xpath",
+                        "waitForSelector": true,
+                        "waitSelectorTimeout": 5000,
+                        "selector": "//*[@id=\"download-button\"]",
+                        "markEl": false,
+                        "multiple": false
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "Aulvrl9o5ThrryaIEDkr2-output-1",
+                            "position": "right",
+                            "x": 196.00299365399073,
+                            "y": 27.993914694209803,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "Aulvrl9o5ThrryaIEDkr2-input-1",
+                            "position": "left",
+                            "x": -20.005357322068253,
+                            "y": 27.993914694209803,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "Aulvrl9o5ThrryaIEDkr2",
+                      "label": "event-click",
+                      "position": {
+                        "x": 1160,
+                        "y": 300
+                      },
+                      "type": "BlockBasic",
+                      "selected": true
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 1440,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "data": {
+                        "code": "const event = new CustomEvent( '__js-event__', {\n  'detail': {\n    'type': 'to_active',\n    'data': { 'workflow_state': 'completed' }\n  }\n});\nwindow.dispatchEvent(event);",
+                        "context": "website",
+                        "description": "",
+                        "disableBlock": false,
+                        "everyNewTab": false,
+                        "preloadScripts": [],
+                        "runBeforeLoad": false,
+                        "timeout": 20000
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "HqX2rN4Kt4N9Ro2MxkHII-output-1",
+                            "position": "right",
+                            "x": 196.0029103070172,
+                            "y": 27.993914694209803,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "HqX2rN4Kt4N9Ro2MxkHII-input-1",
+                            "position": "left",
+                            "x": -19.982770292241025,
+                            "y": 27.993914694209803,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "HqX2rN4Kt4N9Ro2MxkHII",
+                      "label": "javascript-code",
+                      "position": {
+                        "x": 1440,
+                        "y": 300
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 50,
+                        "y": 450,
+                        "z": 0
+                      },
+                      "data": {
+                        "activeTab": true,
+                        "allWindows": false,
+                        "closeType": "tab",
+                        "description": "",
+                        "disableBlock": false,
+                        "url": ""
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "FsJ60mM0Asx8Uxpj-oVuI-output-1",
+                            "position": "right",
+                            "x": 196.00293114376058,
+                            "y": 28.016668417984096,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "FsJ60mM0Asx8Uxpj-oVuI-input-1",
+                            "position": "left",
+                            "x": -19.982645271780726,
+                            "y": 28.016668417984096,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "FsJ60mM0Asx8Uxpj-oVuI",
+                      "label": "close-tab",
+                      "position": {
+                        "x": 50,
+                        "y": 450
+                      },
+                      "type": "BlockBasic"
+                    }
+                  ],
+                  "edges": [
+                    {
+                      "id": "8GUF8RxHjG_z67jo0td7q",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "Xb8i6__ce7sr1MtD1fpXL",
+                      "sourceHandle": "Xb8i6__ce7sr1MtD1fpXL-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "zMirHCF95y5MVC3NLKhct",
+                      "targetHandle": "zMirHCF95y5MVC3NLKhct-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "9XCF5y1mIPy3Bjs6Yo9VC",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "zMirHCF95y5MVC3NLKhct",
+                      "sourceHandle": "zMirHCF95y5MVC3NLKhct-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "Y_pXDr6kawnvDHWgR14HW",
+                      "targetHandle": "Y_pXDr6kawnvDHWgR14HW-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "kP70mwnaBHaoOw8xjf-q8",
+                      "class": "connected-edges",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "l2OPnK3ph1CkgZb4RXTWn",
+                      "sourceHandle": "l2OPnK3ph1CkgZb4RXTWn-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "Aulvrl9o5ThrryaIEDkr2",
+                      "targetHandle": "Aulvrl9o5ThrryaIEDkr2-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "AO6mat1uNQH8ywvrXjNhR",
+                      "class": "connected-edges",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "Aulvrl9o5ThrryaIEDkr2",
+                      "sourceHandle": "Aulvrl9o5ThrryaIEDkr2-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "HqX2rN4Kt4N9Ro2MxkHII",
+                      "targetHandle": "HqX2rN4Kt4N9Ro2MxkHII-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "YMJQsF6b8-YN8tpDLU1Z-",
+                      "class": "source-HqX2rN4Kt4N9Ro2MxkHII-output-1 targte-FsJ60mM0Asx8Uxpj-oVuI-input-1",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "HqX2rN4Kt4N9Ro2MxkHII",
+                      "sourceHandle": "HqX2rN4Kt4N9Ro2MxkHII-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "FsJ60mM0Asx8Uxpj-oVuI",
+                      "targetHandle": "FsJ60mM0Asx8Uxpj-oVuI-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "vueflow__edge-zMirHCF95y5MVC3NLKhctzMirHCF95y5MVC3NLKhct-output-1-l2OPnK3ph1CkgZb4RXTWnl2OPnK3ph1CkgZb4RXTWn-input-1",
+                      "source": "zMirHCF95y5MVC3NLKhct",
+                      "sourceHandle": "zMirHCF95y5MVC3NLKhct-output-1",
+                      "target": "l2OPnK3ph1CkgZb4RXTWn",
+                      "targetHandle": "l2OPnK3ph1CkgZb4RXTWn-input-1",
+                      "updatable": true,
+                      "type": "custom",
+                      "selectable": true,
+                      "markerEnd": "arrowclosed",
+                      "z": 0,
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "targetX": 0,
+                      "targetY": 0
+                    }
+                  ],
+                  "position": [
+                    0,
+                    0
+                  ],
+                  "zoom": 0.7323024985232316
+                },
+                "globalData": "{\n\t\"key\": \"value\"\n}",
+                "icon": "riGlobalLine",
+                "id": "MOtgC_2lQp9ILjiA_O1dL",
+                "isDisabled": false,
+                "name": "LinkedIn",
+                "settings": {
+                  "blockDelay": 0,
+                  "debugMode": false,
+                  "defaultColumnName": "column",
+                  "execContext": "popup",
+                  "executedBlockOnWeb": false,
+                  "inputAutocomplete": true,
+                  "insertDefaultColumn": false,
+                  "notification": true,
+                  "onError": "stop-workflow",
+                  "publicId": "",
+                  "restartTimes": 3,
+                  "reuseLastState": false,
+                  "saveLog": true
+                },
+                "table": [],
+                "trigger": {
+                  "activeInInput": false,
+                  "contextMenuName": "",
+                  "contextTypes": [],
+                  "date": "",
+                  "days": [],
+                  "delay": 5,
+                  "description": "",
+                  "disableBlock": false,
+                  "interval": 60,
+                  "isUrlRegex": false,
+                  "observeElement": {
+                    "baseElOptions": {
+                      "attributeFilter": [],
+                      "attributes": false,
+                      "characterData": false,
+                      "childList": true,
+                      "subtree": false
+                    },
+                    "baseSelector": "",
+                    "matchPattern": "",
+                    "selector": "",
+                    "targetOptions": {
+                      "attributeFilter": [],
+                      "attributes": false,
+                      "characterData": false,
+                      "childList": true,
+                      "subtree": false
+                    }
+                  },
+                  "parameters": [],
+                  "shortcut": "",
+                  "time": "00:00",
+                  "type": "manual",
+                  "url": ""
+                },
+                "updatedAt": 1674570328932,
+                "version": "1.23.4.1"
+              }
+            ],
+            "version": 0,
+            "verified": true
+          }
+        }
+      },
+      {
+        "api": {
+          "available": false
+        }
+      }
+    ],
+    "requestParameter": {
+      "timeRange": {
+        "allTime": true,
+        "customRange": {
+          "available": false
+        }
+      },
+      "mediaQuality": [
+        "medium"
+      ],
+      "dataFormat": [
+        "CSV"
+      ]
+    },
+    "createdAt": "2023-02-15T11:34:36.133000Z",
+    "updatedAt": "2023-02-15T11:34:36.133000Z"
+  }

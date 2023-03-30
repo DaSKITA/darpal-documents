@@ -1,0 +1,236 @@
+{
+    "meta": {
+      "name": "Vinted",
+      "version": 1,
+      "_hash": "5f99033c113f2772a2e90b0d6bb564697b7c4f0caaef7987a45fa6dd95fb16b6"
+    },
+    "requestInterface": [
+      {
+        "manual": {
+          "available": false
+        }
+      },
+      {
+        "webinterface": {
+          "available": true,
+          "startUrl": "https://www.vinted.de/request_data_export",
+          "authentication": "password",
+          "workflowContainer": {
+            "automationEngine": "automa",
+            "workflow": [
+              {
+                "createdAt": 1674092031150,
+                "dataColumns": [],
+                "description": "",
+                "drawflow": {
+                  "edges": [
+                    {
+                      "class": "source-3u5PiWKEg9ZRd0GzNUjci-output-1 targte-px26M5okqCagjZLWbeMGm-input-1",
+                      "id": "xeXesiCl1W-I2YVC-ahFq",
+                      "source": "3u5PiWKEg9ZRd0GzNUjci",
+                      "sourceHandle": "3u5PiWKEg9ZRd0GzNUjci-output-1",
+                      "target": "px26M5okqCagjZLWbeMGm",
+                      "targetHandle": "px26M5okqCagjZLWbeMGm-input-1"
+                    },
+                    {
+                      "class": "source-px26M5okqCagjZLWbeMGm-output-1 targte-rJGu6ylZDzZ3fN-7N7c8U-input-1",
+                      "id": "ugwKQ89__5h8k03s5Cy5_",
+                      "source": "px26M5okqCagjZLWbeMGm",
+                      "sourceHandle": "px26M5okqCagjZLWbeMGm-output-1",
+                      "target": "rJGu6ylZDzZ3fN-7N7c8U",
+                      "targetHandle": "rJGu6ylZDzZ3fN-7N7c8U-input-1"
+                    },
+                    {
+                      "class": "source-rJGu6ylZDzZ3fN-7N7c8U-output-1 targte-B2Qk1-qBWcFo7IxzAaTuU-input-1",
+                      "id": "F68hYC5BiUWJVbHRCy2q6",
+                      "source": "rJGu6ylZDzZ3fN-7N7c8U",
+                      "sourceHandle": "rJGu6ylZDzZ3fN-7N7c8U-output-1",
+                      "target": "B2Qk1-qBWcFo7IxzAaTuU",
+                      "targetHandle": "B2Qk1-qBWcFo7IxzAaTuU-input-1"
+                    },
+                    {
+                      "class": "source-B2Qk1-qBWcFo7IxzAaTuU-output-1 targte-vHtlBrrsyS6ezXyYYzW9g-input-1",
+                      "id": "fUHu248jCMBASRZXrr2NS",
+                      "source": "B2Qk1-qBWcFo7IxzAaTuU",
+                      "sourceHandle": "B2Qk1-qBWcFo7IxzAaTuU-output-1",
+                      "target": "vHtlBrrsyS6ezXyYYzW9g",
+                      "targetHandle": "vHtlBrrsyS6ezXyYYzW9g-input-1"
+                    }
+                  ],
+                  "nodes": [
+                    {
+                      "data": {
+                        "activeInInput": false,
+                        "contextMenuName": "",
+                        "contextTypes": [],
+                        "date": "",
+                        "days": [],
+                        "delay": 5,
+                        "description": "",
+                        "disableBlock": false,
+                        "interval": 60,
+                        "isUrlRegex": false,
+                        "observeElement": {
+                          "baseElOptions": {
+                            "attributeFilter": [],
+                            "attributes": false,
+                            "characterData": false,
+                            "childList": true,
+                            "subtree": false
+                          },
+                          "baseSelector": "",
+                          "matchPattern": "",
+                          "selector": "",
+                          "targetOptions": {
+                            "attributeFilter": [],
+                            "attributes": false,
+                            "characterData": false,
+                            "childList": true,
+                            "subtree": false
+                          }
+                        },
+                        "parameters": [],
+                        "shortcut": "",
+                        "time": "00:00",
+                        "type": "manual",
+                        "url": ""
+                      },
+                      "id": "3u5PiWKEg9ZRd0GzNUjci",
+                      "label": "trigger",
+                      "position": {
+                        "x": 50,
+                        "y": 300
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "data": {
+                        "active": false,
+                        "customUserAgent": false,
+                        "description": "",
+                        "disableBlock": false,
+                        "inGroup": false,
+                        "updatePrevTab": false,
+                        "url": "https://www.vinted.de/request_data_export",
+                        "userAgent": "",
+                        "waitTabLoaded": true
+                      },
+                      "id": "px26M5okqCagjZLWbeMGm",
+                      "label": "new-tab",
+                      "position": {
+                        "x": 320,
+                        "y": 300
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "data": {
+                        "code": "\n            const event = (state) => new CustomEvent( '__js-event__', {\n              'detail': {\n                'type': 'to_active',\n                'data': { 'workflow_state': state }\n              }\n            });\n            if (window.location.href == \"https://www.vinted.de/request_data_export\"){\n              window.dispatchEvent(event('started'));\n            } else {\n              window.dispatchEvent(event('start-failed'));\n            }",
+                        "context": "website",
+                        "description": "",
+                        "disableBlock": false,
+                        "everyNewTab": false,
+                        "preloadScripts": [],
+                        "runBeforeLoad": false,
+                        "timeout": 20000
+                      },
+                      "id": "rJGu6ylZDzZ3fN-7N7c8U",
+                      "label": "javascript-code",
+                      "position": {
+                        "x": 600,
+                        "y": 300
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "data": {
+                        "code": "const event = new CustomEvent( '__js-event__', {\n  'detail': {\n    'type': 'to_active',\n    'data': { 'workflow_state': 'completed' }\n  }\n});\nwindow.dispatchEvent(event);",
+                        "context": "website",
+                        "description": "",
+                        "disableBlock": false,
+                        "everyNewTab": false,
+                        "preloadScripts": [],
+                        "runBeforeLoad": false,
+                        "timeout": 20000
+                      },
+                      "id": "B2Qk1-qBWcFo7IxzAaTuU",
+                      "label": "javascript-code",
+                      "position": {
+                        "x": 880,
+                        "y": 300
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "data": {
+                        "activeTab": true,
+                        "allWindows": false,
+                        "closeType": "tab",
+                        "description": "",
+                        "disableBlock": false,
+                        "url": ""
+                      },
+                      "id": "vHtlBrrsyS6ezXyYYzW9g",
+                      "label": "close-tab",
+                      "position": {
+                        "x": 1160,
+                        "y": 300
+                      },
+                      "type": "BlockBasic"
+                    }
+                  ],
+                  "zoom": 1.3
+                },
+                "globalData": "{\n\t\"key\": \"value\"\n}",
+                "icon": "riGlobalLine",
+                "id": "_Aq9dX_MByUpNcZ-FhLZb",
+                "isDisabled": false,
+                "name": "Vinted",
+                "settings": {
+                  "blockDelay": 0,
+                  "debugMode": false,
+                  "defaultColumnName": "column",
+                  "execContext": "popup",
+                  "executedBlockOnWeb": false,
+                  "inputAutocomplete": true,
+                  "insertDefaultColumn": false,
+                  "notification": true,
+                  "onError": "stop-workflow",
+                  "publicId": "",
+                  "restartTimes": 3,
+                  "reuseLastState": false,
+                  "saveLog": true
+                },
+                "table": [],
+                "updatedAt": 1674092053353,
+                "version": "1.23.5"
+              }
+            ],
+            "version": 0,
+            "verified": true
+          }
+        }
+      },
+      {
+        "api": {
+          "available": false
+        }
+      }
+    ],
+    "requestParameter": {
+      "timeRange": {
+        "allTime": true,
+        "customRange": {
+          "available": false
+        }
+      },
+      "mediaQuality": [
+        "medium"
+      ],
+      "dataFormat": [
+        "CSV"
+      ]
+    },
+    "createdAt": "2023-02-15T11:34:36.143000Z",
+    "updatedAt": "2023-02-15T11:34:36.143000Z"
+  }

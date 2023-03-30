@@ -1,0 +1,1118 @@
+{
+    "meta": {
+      "name": "Deezer",
+      "version": 1,
+      "_hash": "c6d9b275af7e6dbe2f0d4dadd7be841a5b9a0ae27ade0436269da7ec63f46266"
+    },
+    "requestInterface": [
+      {
+        "manual": {
+          "available": false
+        }
+      },
+      {
+        "webinterface": {
+          "available": true,
+          "startUrl": "https://support.deezer.com/hc/de",
+          "authentication": "password",
+          "workflowContainer": {
+            "automationEngine": "automa",
+            "workflow": [
+              {
+                "createdAt": 1674125667139,
+                "dataColumns": [],
+                "description": "",
+                "drawflow": {
+                  "edges": [
+                    {
+                      "class": "source-48T_KUFp8LS5grT38Dmpx-output-1 targte-iY3YxeTQH_OoRLys2E3Uu-input-1",
+                      "id": "OJ0aAMK2Xgn0Jb-c0ipCG",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "48T_KUFp8LS5grT38Dmpx",
+                      "sourceHandle": "48T_KUFp8LS5grT38Dmpx-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "iY3YxeTQH_OoRLys2E3Uu",
+                      "targetHandle": "iY3YxeTQH_OoRLys2E3Uu-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "class": "source-iY3YxeTQH_OoRLys2E3Uu-output-1 targte-SrApzjU0jLvg5pDCwe2kK-input-1",
+                      "id": "6nDmNL6EEgXCXjp5g54ZS",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "iY3YxeTQH_OoRLys2E3Uu",
+                      "sourceHandle": "iY3YxeTQH_OoRLys2E3Uu-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "SrApzjU0jLvg5pDCwe2kK",
+                      "targetHandle": "SrApzjU0jLvg5pDCwe2kK-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "class": "source-SrApzjU0jLvg5pDCwe2kK-output-1 targte-reBGRHJs8rDvs7fxAEmpL-input-1",
+                      "id": "ndqa_OOQ9mMs8FABNXgyG",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "SrApzjU0jLvg5pDCwe2kK",
+                      "sourceHandle": "SrApzjU0jLvg5pDCwe2kK-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "reBGRHJs8rDvs7fxAEmpL",
+                      "targetHandle": "reBGRHJs8rDvs7fxAEmpL-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "class": "source-reBGRHJs8rDvs7fxAEmpL-output-1 targte-D1MnFaPbFfiDfKhrZrR6C-input-1",
+                      "id": "qtxJ9DeItOsiUUKJ3YrcQ",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "reBGRHJs8rDvs7fxAEmpL",
+                      "sourceHandle": "reBGRHJs8rDvs7fxAEmpL-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "D1MnFaPbFfiDfKhrZrR6C",
+                      "targetHandle": "D1MnFaPbFfiDfKhrZrR6C-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "class": "source-D1MnFaPbFfiDfKhrZrR6C-output-1 targte-cORnAVqmJMtzomQnAMOX4-input-1",
+                      "id": "crSonxRJnO_pb5ox2Iw-n",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "D1MnFaPbFfiDfKhrZrR6C",
+                      "sourceHandle": "D1MnFaPbFfiDfKhrZrR6C-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "cORnAVqmJMtzomQnAMOX4",
+                      "targetHandle": "cORnAVqmJMtzomQnAMOX4-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "class": "source-cORnAVqmJMtzomQnAMOX4-output-1 targte-3g4aDfrl1fZJJVo1GW_gb-input-1",
+                      "id": "71dkRu3A4zQKazyk1H7W6",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "cORnAVqmJMtzomQnAMOX4",
+                      "sourceHandle": "cORnAVqmJMtzomQnAMOX4-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "3g4aDfrl1fZJJVo1GW_gb",
+                      "targetHandle": "3g4aDfrl1fZJJVo1GW_gb-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "class": "source-3g4aDfrl1fZJJVo1GW_gb-output-1 targte-mPxw9kLb2N-bE1JV0tc8J-input-1",
+                      "id": "lu3pNhLVl8dsgDEJX5K0J",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "3g4aDfrl1fZJJVo1GW_gb",
+                      "sourceHandle": "3g4aDfrl1fZJJVo1GW_gb-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "mPxw9kLb2N-bE1JV0tc8J",
+                      "targetHandle": "mPxw9kLb2N-bE1JV0tc8J-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "WTWL0Ymhp74NoPBEd4ypN",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "mPxw9kLb2N-bE1JV0tc8J",
+                      "sourceHandle": "mPxw9kLb2N-bE1JV0tc8J-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "4RLBynNW3PcC-feGu4yPZ",
+                      "targetHandle": "4RLBynNW3PcC-feGu4yPZ-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "1ukeOc1cpif_XJ1erQTN5",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "4RLBynNW3PcC-feGu4yPZ",
+                      "sourceHandle": "4RLBynNW3PcC-feGu4yPZ-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "w4palmxUmB4tYTSAvinA0",
+                      "targetHandle": "w4palmxUmB4tYTSAvinA0-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "n6-0mZdRVFH6QbUTn5GUM",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "w4palmxUmB4tYTSAvinA0",
+                      "sourceHandle": "w4palmxUmB4tYTSAvinA0-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "ti11sCjJRbvNzMd_XpU_t",
+                      "targetHandle": "ti11sCjJRbvNzMd_XpU_t-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "tBLQZji2axhHq-Z2Wr57L",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "rxQj7pW_yk1vYh2ffRiL-",
+                      "sourceHandle": "rxQj7pW_yk1vYh2ffRiL--output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "t_g2lN8yKkTzwJqYAEtLf",
+                      "targetHandle": "t_g2lN8yKkTzwJqYAEtLf-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "class": "connected-edges",
+                      "id": "vueflow__edge-t_g2lN8yKkTzwJqYAEtLft_g2lN8yKkTzwJqYAEtLf-output-1-uiFkKDLgQ9Ws6p9RqkmjWuiFkKDLgQ9Ws6p9RqkmjW-input-1",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "t_g2lN8yKkTzwJqYAEtLf",
+                      "sourceHandle": "t_g2lN8yKkTzwJqYAEtLf-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "uiFkKDLgQ9Ws6p9RqkmjW",
+                      "targetHandle": "uiFkKDLgQ9Ws6p9RqkmjW-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "class": "source-ti11sCjJRbvNzMd_XpU_t-output-1 target-rxQj7pW_yk1vYh2ffRiL--input-1",
+                      "id": "vueflow__edge-ti11sCjJRbvNzMd_XpU_tti11sCjJRbvNzMd_XpU_t-output-1-rxQj7pW_yk1vYh2ffRiL-rxQj7pW_yk1vYh2ffRiL--input-1",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "ti11sCjJRbvNzMd_XpU_t",
+                      "sourceHandle": "ti11sCjJRbvNzMd_XpU_t-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "rxQj7pW_yk1vYh2ffRiL-",
+                      "targetHandle": "rxQj7pW_yk1vYh2ffRiL--input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    }
+                  ],
+                  "nodes": [
+                    {
+                      "computedPosition": {
+                        "x": 96,
+                        "y": 36,
+                        "z": 0
+                      },
+                      "data": {
+                        "activeInInput": false,
+                        "contextMenuName": "",
+                        "contextTypes": [],
+                        "date": "",
+                        "days": [],
+                        "delay": 5,
+                        "description": "",
+                        "disableBlock": false,
+                        "interval": 60,
+                        "isUrlRegex": false,
+                        "observeElement": {
+                          "baseElOptions": {
+                            "attributeFilter": [],
+                            "attributes": false,
+                            "characterData": false,
+                            "childList": true,
+                            "subtree": false
+                          },
+                          "baseSelector": "",
+                          "matchPattern": "",
+                          "selector": "",
+                          "targetOptions": {
+                            "attributeFilter": [],
+                            "attributes": false,
+                            "characterData": false,
+                            "childList": true,
+                            "subtree": false
+                          }
+                        },
+                        "parameters": [],
+                        "shortcut": "",
+                        "time": "00:00",
+                        "type": "manual",
+                        "url": ""
+                      },
+                      "dimensions": {
+                        "height": 72,
+                        "width": 192
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "height": 16,
+                            "id": "48T_KUFp8LS5grT38Dmpx-output-1",
+                            "position": "right",
+                            "width": 16,
+                            "x": 195.9999248247576,
+                            "y": 27.999998160039546
+                          }
+                        ]
+                      },
+                      "id": "48T_KUFp8LS5grT38Dmpx",
+                      "label": "trigger",
+                      "position": {
+                        "x": 96,
+                        "y": 36
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 388,
+                        "y": 36,
+                        "z": 0
+                      },
+                      "data": {
+                        "active": false,
+                        "customUserAgent": false,
+                        "description": "",
+                        "disableBlock": false,
+                        "inGroup": false,
+                        "updatePrevTab": false,
+                        "url": "https://support.deezer.com/hc/de",
+                        "userAgent": "",
+                        "waitTabLoaded": true
+                      },
+                      "dimensions": {
+                        "height": 72,
+                        "width": 192
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "height": 16,
+                            "id": "iY3YxeTQH_OoRLys2E3Uu-output-1",
+                            "position": "right",
+                            "width": 16,
+                            "x": 195.99995597251723,
+                            "y": 27.999998160039546
+                          }
+                        ],
+                        "target": [
+                          {
+                            "height": 16,
+                            "id": "iY3YxeTQH_OoRLys2E3Uu-input-1",
+                            "position": "left",
+                            "width": 16,
+                            "x": -19.99997643734282,
+                            "y": 27.999998160039546
+                          }
+                        ]
+                      },
+                      "id": "iY3YxeTQH_OoRLys2E3Uu",
+                      "label": "new-tab",
+                      "position": {
+                        "x": 388,
+                        "y": 36
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 680,
+                        "y": 36,
+                        "z": 0
+                      },
+                      "data": {
+                        "code": "\n            const event = (state) => new CustomEvent( '__js-event__', {\n              'detail': {\n                'type': 'to_active',\n                'data': { 'workflow_state': state }\n              }\n            });\n            if (window.location.href == \"https://support.deezer.com/hc/de\"){\n              window.dispatchEvent(event('started'));\n            } else {\n              window.dispatchEvent(event('start-failed'));\n            }",
+                        "context": "website",
+                        "description": "",
+                        "disableBlock": false,
+                        "everyNewTab": false,
+                        "preloadScripts": [],
+                        "runBeforeLoad": false,
+                        "timeout": 20000
+                      },
+                      "dimensions": {
+                        "height": 72,
+                        "width": 192
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "height": 16,
+                            "id": "SrApzjU0jLvg5pDCwe2kK-output-1",
+                            "position": "right",
+                            "width": 16,
+                            "x": 195.99989367699803,
+                            "y": 27.999998160039546
+                          }
+                        ],
+                        "target": [
+                          {
+                            "height": 16,
+                            "id": "SrApzjU0jLvg5pDCwe2kK-input-1",
+                            "position": "left",
+                            "width": 16,
+                            "x": -19.99997643734282,
+                            "y": 27.999998160039546
+                          }
+                        ]
+                      },
+                      "id": "SrApzjU0jLvg5pDCwe2kK",
+                      "label": "javascript-code",
+                      "position": {
+                        "x": 680,
+                        "y": 36
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 972,
+                        "y": 36,
+                        "z": 0
+                      },
+                      "data": {
+                        "description": "ANFRAGE EINREICHEN ",
+                        "disableBlock": false,
+                        "findBy": "xpath",
+                        "markEl": false,
+                        "multiple": false,
+                        "selector": "//BODY/MAIN[1]/SECTION[1]/DIV[1]/DIV[2]/A[1]",
+                        "waitForSelector": true,
+                        "waitSelectorTimeout": 5000
+                      },
+                      "dimensions": {
+                        "height": 72,
+                        "width": 192
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "height": 16,
+                            "id": "reBGRHJs8rDvs7fxAEmpL-output-1",
+                            "position": "right",
+                            "width": 16,
+                            "x": 195.99989367699803,
+                            "y": 27.999998160039546
+                          }
+                        ],
+                        "target": [
+                          {
+                            "height": 16,
+                            "id": "reBGRHJs8rDvs7fxAEmpL-input-1",
+                            "position": "left",
+                            "width": 16,
+                            "x": -19.99997643734282,
+                            "y": 27.999998160039546
+                          }
+                        ]
+                      },
+                      "id": "reBGRHJs8rDvs7fxAEmpL",
+                      "label": "event-click",
+                      "position": {
+                        "x": 972,
+                        "y": 36
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 1264,
+                        "y": 36,
+                        "z": 0
+                      },
+                      "data": {
+                        "active": false,
+                        "customUserAgent": false,
+                        "description": "",
+                        "disableBlock": false,
+                        "inGroup": false,
+                        "updatePrevTab": true,
+                        "url": "https://support.deezer.com/hc/de/requests/new",
+                        "userAgent": "",
+                        "waitTabLoaded": false
+                      },
+                      "dimensions": {
+                        "height": 72,
+                        "width": 192
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "height": 16,
+                            "id": "D1MnFaPbFfiDfKhrZrR6C-output-1",
+                            "position": "right",
+                            "width": 16,
+                            "x": 195.99989367699803,
+                            "y": 27.999998160039546
+                          }
+                        ],
+                        "target": [
+                          {
+                            "height": 16,
+                            "id": "D1MnFaPbFfiDfKhrZrR6C-input-1",
+                            "position": "left",
+                            "width": 16,
+                            "x": -19.99997643734282,
+                            "y": 27.999998160039546
+                          }
+                        ]
+                      },
+                      "id": "D1MnFaPbFfiDfKhrZrR6C",
+                      "label": "new-tab",
+                      "position": {
+                        "x": 1264,
+                        "y": 36
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 1556,
+                        "y": 36,
+                        "z": 0
+                      },
+                      "data": {
+                        "description": "-",
+                        "disableBlock": false,
+                        "findBy": "xpath",
+                        "markEl": false,
+                        "multiple": false,
+                        "selector": "//BODY/MAIN[1]/DIV[2]/DIV[1]/FORM[1]/DIV[1]/A[1]",
+                        "waitForSelector": true,
+                        "waitSelectorTimeout": 5000
+                      },
+                      "dimensions": {
+                        "height": 72,
+                        "width": 192
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "height": 16,
+                            "id": "cORnAVqmJMtzomQnAMOX4-output-1",
+                            "position": "right",
+                            "width": 16,
+                            "x": 195.99989367699803,
+                            "y": 27.999998160039546
+                          }
+                        ],
+                        "target": [
+                          {
+                            "height": 16,
+                            "id": "cORnAVqmJMtzomQnAMOX4-input-1",
+                            "position": "left",
+                            "width": 16,
+                            "x": -19.99997643734282,
+                            "y": 27.999998160039546
+                          }
+                        ]
+                      },
+                      "id": "cORnAVqmJMtzomQnAMOX4",
+                      "label": "event-click",
+                      "position": {
+                        "x": 1556,
+                        "y": 36
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 1848,
+                        "y": 36,
+                        "z": 0
+                      },
+                      "data": {
+                        "assignVariable": false,
+                        "clearValue": true,
+                        "dataColumn": "",
+                        "delay": 100,
+                        "description": "",
+                        "disableBlock": false,
+                        "events": [],
+                        "findBy": "xpath",
+                        "getValue": false,
+                        "markEl": false,
+                        "multiple": false,
+                        "optionPosition": "1",
+                        "saveData": false,
+                        "selectOptionBy": "value",
+                        "selected": true,
+                        "selector": "//BODY/MAIN[1]/DIV[2]/DIV[1]/FORM[1]/DIV[1]/SELECT[1]",
+                        "type": "select",
+                        "value": "360000057869",
+                        "variableName": "",
+                        "waitForSelector": true,
+                        "waitSelectorTimeout": 5000
+                      },
+                      "dimensions": {
+                        "height": 72,
+                        "width": 192
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "height": 16,
+                            "id": "3g4aDfrl1fZJJVo1GW_gb-output-1",
+                            "position": "right",
+                            "width": 16,
+                            "x": 195.9999248247576,
+                            "y": 27.999998160039546
+                          }
+                        ],
+                        "target": [
+                          {
+                            "height": 16,
+                            "id": "3g4aDfrl1fZJJVo1GW_gb-input-1",
+                            "position": "left",
+                            "width": 16,
+                            "x": -19.99997643734282,
+                            "y": 27.999998160039546
+                          }
+                        ]
+                      },
+                      "id": "3g4aDfrl1fZJJVo1GW_gb",
+                      "label": "forms",
+                      "position": {
+                        "x": 1848,
+                        "y": 36
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 2140,
+                        "y": 36,
+                        "z": 0
+                      },
+                      "data": {
+                        "active": false,
+                        "customUserAgent": false,
+                        "description": "",
+                        "disableBlock": false,
+                        "inGroup": false,
+                        "updatePrevTab": true,
+                        "url": "https://support.deezer.com/hc/de/requests/new?ticket_form_id=360000057869",
+                        "userAgent": "",
+                        "waitTabLoaded": false
+                      },
+                      "dimensions": {
+                        "height": 72,
+                        "width": 192
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "height": 16,
+                            "id": "mPxw9kLb2N-bE1JV0tc8J-output-1",
+                            "position": "right",
+                            "width": 16,
+                            "x": 195.99989367699803,
+                            "y": 27.999998160039546
+                          }
+                        ],
+                        "target": [
+                          {
+                            "height": 16,
+                            "id": "mPxw9kLb2N-bE1JV0tc8J-input-1",
+                            "position": "left",
+                            "width": 16,
+                            "x": -19.99997643734282,
+                            "y": 27.999998160039546
+                          }
+                        ]
+                      },
+                      "id": "mPxw9kLb2N-bE1JV0tc8J",
+                      "label": "new-tab",
+                      "position": {
+                        "x": 2140,
+                        "y": 36
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 2432,
+                        "y": 36,
+                        "z": 0
+                      },
+                      "data": {
+                        "description": "-",
+                        "disableBlock": false,
+                        "findBy": "xpath",
+                        "markEl": false,
+                        "multiple": false,
+                        "selector": "//BODY/MAIN[1]/DIV[2]/DIV[1]/FORM[1]/DIV[3]/A[1]",
+                        "waitForSelector": true,
+                        "waitSelectorTimeout": 5000
+                      },
+                      "dimensions": {
+                        "height": 72,
+                        "width": 192
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "height": 16,
+                            "id": "4RLBynNW3PcC-feGu4yPZ-output-1",
+                            "position": "right",
+                            "width": 16,
+                            "x": 195.99995597251723,
+                            "y": 27.999998160039546
+                          }
+                        ],
+                        "target": [
+                          {
+                            "height": 16,
+                            "id": "4RLBynNW3PcC-feGu4yPZ-input-1",
+                            "position": "left",
+                            "width": 16,
+                            "x": -19.99997643734282,
+                            "y": 27.999998160039546
+                          }
+                        ]
+                      },
+                      "id": "4RLBynNW3PcC-feGu4yPZ",
+                      "label": "event-click",
+                      "position": {
+                        "x": 2432,
+                        "y": 36
+                      },
+                      "selected": false,
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 2724,
+                        "y": 36,
+                        "z": 0
+                      },
+                      "data": {
+                        "assignVariable": false,
+                        "clearValue": true,
+                        "dataColumn": "",
+                        "delay": 100,
+                        "description": "",
+                        "disableBlock": false,
+                        "events": [],
+                        "findBy": "xpath",
+                        "getValue": false,
+                        "markEl": false,
+                        "multiple": false,
+                        "optionPosition": "1",
+                        "saveData": false,
+                        "selectOptionBy": "value",
+                        "selected": true,
+                        "selector": "//BODY/MAIN[1]/DIV[2]/DIV[1]/FORM[1]/DIV[3]/INPUT[1]",
+                        "type": "text-field",
+                        "value": "__dc.account_data_issue_field_3__",
+                        "variableName": "",
+                        "waitForSelector": true,
+                        "waitSelectorTimeout": 5000
+                      },
+                      "dimensions": {
+                        "height": 72,
+                        "width": 192
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "height": 16,
+                            "id": "w4palmxUmB4tYTSAvinA0-output-1",
+                            "position": "right",
+                            "width": 16,
+                            "x": 196.00001826803643,
+                            "y": 27.999998160039546
+                          }
+                        ],
+                        "target": [
+                          {
+                            "height": 16,
+                            "id": "w4palmxUmB4tYTSAvinA0-input-1",
+                            "position": "left",
+                            "width": 16,
+                            "x": -19.99985184630443,
+                            "y": 27.999998160039546
+                          }
+                        ]
+                      },
+                      "id": "w4palmxUmB4tYTSAvinA0",
+                      "label": "forms",
+                      "position": {
+                        "x": 2724,
+                        "y": 36
+                      },
+                      "selected": false,
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 3016,
+                        "y": 36,
+                        "z": 0
+                      },
+                      "data": {
+                        "assignVariable": false,
+                        "clearValue": true,
+                        "dataColumn": "",
+                        "delay": 100,
+                        "description": "",
+                        "disableBlock": false,
+                        "events": [],
+                        "findBy": "xpath",
+                        "getValue": false,
+                        "markEl": false,
+                        "multiple": false,
+                        "optionPosition": "1",
+                        "saveData": false,
+                        "selectOptionBy": "value",
+                        "selected": true,
+                        "selector": "//BODY/MAIN[1]/DIV[2]/DIV[1]/FORM[1]/DIV[4]/INPUT[1]",
+                        "type": "text-field",
+                        "value": "Datenanfrage",
+                        "variableName": "",
+                        "waitForSelector": true,
+                        "waitSelectorTimeout": 5000
+                      },
+                      "dimensions": {
+                        "height": 72,
+                        "width": 192
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "height": 16,
+                            "id": "ti11sCjJRbvNzMd_XpU_t-output-1",
+                            "position": "right",
+                            "width": 16,
+                            "x": 195.99989367699803,
+                            "y": 27.999998160039546
+                          }
+                        ],
+                        "target": [
+                          {
+                            "height": 16,
+                            "id": "ti11sCjJRbvNzMd_XpU_t-input-1",
+                            "position": "left",
+                            "width": 16,
+                            "x": -20.00010102838121,
+                            "y": 27.999998160039546
+                          }
+                        ]
+                      },
+                      "id": "ti11sCjJRbvNzMd_XpU_t",
+                      "label": "forms",
+                      "position": {
+                        "x": 3016,
+                        "y": 36
+                      },
+                      "selected": false,
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 3308,
+                        "y": 36,
+                        "z": 0
+                      },
+                      "data": {
+                        "description": "-",
+                        "disableBlock": false,
+                        "findBy": "xpath",
+                        "markEl": false,
+                        "multiple": false,
+                        "selector": "//BODY/MAIN[1]/DIV[2]/DIV[1]/FORM[1]/DIV[9]/A[1]",
+                        "waitForSelector": true,
+                        "waitSelectorTimeout": 5000
+                      },
+                      "dimensions": {
+                        "height": 72,
+                        "width": 192
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "height": 16,
+                            "id": "rxQj7pW_yk1vYh2ffRiL--output-1",
+                            "position": "right",
+                            "width": 16,
+                            "x": 196.00001826803643,
+                            "y": 28.000029307799142
+                          }
+                        ],
+                        "target": [
+                          {
+                            "height": 16,
+                            "id": "rxQj7pW_yk1vYh2ffRiL--input-1",
+                            "position": "left",
+                            "width": 16,
+                            "x": -19.99985184630443,
+                            "y": 28.000029307799142
+                          }
+                        ]
+                      },
+                      "id": "rxQj7pW_yk1vYh2ffRiL-",
+                      "label": "event-click",
+                      "position": {
+                        "x": 3308,
+                        "y": 36
+                      },
+                      "selected": false,
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 3600,
+                        "y": 36,
+                        "z": 0
+                      },
+                      "data": {
+                        "assignVariable": false,
+                        "clearValue": true,
+                        "dataColumn": "",
+                        "delay": 100,
+                        "description": "",
+                        "disableBlock": false,
+                        "events": [],
+                        "findBy": "xpath",
+                        "getValue": false,
+                        "markEl": false,
+                        "multiple": false,
+                        "optionPosition": "1",
+                        "saveData": false,
+                        "selectOptionBy": "value",
+                        "selected": true,
+                        "selector": "//BODY/MAIN[1]/DIV[2]/DIV[1]/FORM[1]/DIV[9]/INPUT[1]",
+                        "type": "text-field",
+                        "value": "country_de",
+                        "variableName": "",
+                        "waitForSelector": true,
+                        "waitSelectorTimeout": 5000
+                      },
+                      "dimensions": {
+                        "height": 72,
+                        "width": 192
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "height": 16,
+                            "id": "t_g2lN8yKkTzwJqYAEtLf-output-1",
+                            "position": "right",
+                            "width": 16,
+                            "x": 195.99989367699803,
+                            "y": 28.000029307799142
+                          }
+                        ],
+                        "target": [
+                          {
+                            "height": 16,
+                            "id": "t_g2lN8yKkTzwJqYAEtLf-input-1",
+                            "position": "left",
+                            "width": 16,
+                            "x": -20.00010102838121,
+                            "y": 28.000029307799142
+                          }
+                        ]
+                      },
+                      "id": "t_g2lN8yKkTzwJqYAEtLf",
+                      "label": "forms",
+                      "position": {
+                        "x": 3600,
+                        "y": 36
+                      },
+                      "selected": false,
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 3892,
+                        "y": 36,
+                        "z": 1000
+                      },
+                      "data": {
+                        "code": "const event = new CustomEvent( '__js-event__', {\n  'detail': {\n    'type': 'to_active',\n    'data': { 'workflow_state': 'interaction-needed' }\n  }\n});\nwindow.dispatchEvent(event);",
+                        "context": "website",
+                        "description": "",
+                        "disableBlock": false,
+                        "everyNewTab": false,
+                        "preloadScripts": [],
+                        "runBeforeLoad": false,
+                        "timeout": 20000
+                      },
+                      "dimensions": {
+                        "height": 72,
+                        "width": 192
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "height": 16,
+                            "id": "uiFkKDLgQ9Ws6p9RqkmjW-output-1",
+                            "position": "right",
+                            "width": 16,
+                            "x": 195.99989367699803,
+                            "y": 28.000029307799142
+                          }
+                        ],
+                        "target": [
+                          {
+                            "height": 16,
+                            "id": "uiFkKDLgQ9Ws6p9RqkmjW-input-1",
+                            "position": "left",
+                            "width": 16,
+                            "x": -19.99997643734282,
+                            "y": 28.000029307799142
+                          }
+                        ]
+                      },
+                      "id": "uiFkKDLgQ9Ws6p9RqkmjW",
+                      "label": "javascript-code",
+                      "position": {
+                        "x": 3892,
+                        "y": 36
+                      },
+                      "selected": true,
+                      "type": "BlockBasic"
+                    }
+                  ],
+                  "position": [
+                    175.83632170240026,
+                    426.3925718014069
+                  ],
+                  "zoom": 0.49810148706752966
+                },
+                "globalData": "{\n\t\"key\": \"value\"\n}",
+                "icon": "riGlobalLine",
+                "id": "cIEwCv32VNYsQYjO4ypFh",
+                "isDisabled": false,
+                "name": "Deezer",
+                "settings": {
+                  "blockDelay": 0,
+                  "debugMode": false,
+                  "defaultColumnName": "column",
+                  "execContext": "popup",
+                  "executedBlockOnWeb": false,
+                  "inputAutocomplete": true,
+                  "insertDefaultColumn": false,
+                  "notification": true,
+                  "onError": "stop-workflow",
+                  "publicId": "",
+                  "restartTimes": 3,
+                  "reuseLastState": false,
+                  "saveLog": true
+                },
+                "table": [],
+                "trigger": {
+                  "activeInInput": false,
+                  "contextMenuName": "",
+                  "contextTypes": [],
+                  "date": "",
+                  "days": [],
+                  "delay": 5,
+                  "description": "",
+                  "disableBlock": false,
+                  "interval": 60,
+                  "isUrlRegex": false,
+                  "observeElement": {
+                    "baseElOptions": {
+                      "attributeFilter": [],
+                      "attributes": false,
+                      "characterData": false,
+                      "childList": true,
+                      "subtree": false
+                    },
+                    "baseSelector": "",
+                    "matchPattern": "",
+                    "selector": "",
+                    "targetOptions": {
+                      "attributeFilter": [],
+                      "attributes": false,
+                      "characterData": false,
+                      "childList": true,
+                      "subtree": false
+                    }
+                  },
+                  "parameters": [],
+                  "shortcut": "",
+                  "time": "00:00",
+                  "type": "manual",
+                  "url": ""
+                },
+                "updatedAt": 1674219325777,
+                "version": "1.23.4.1"
+              }
+            ],
+            "version": 0,
+            "verified": true
+          }
+        }
+      },
+      {
+        "api": {
+          "available": false
+        }
+      }
+    ],
+    "requestParameter": {
+      "timeRange": {
+        "allTime": true,
+        "customRange": {
+          "available": false
+        }
+      },
+      "mediaQuality": [
+        "medium"
+      ],
+      "dataFormat": [
+        "CSV"
+      ]
+    },
+    "createdAt": "2023-02-15T11:34:36.145000Z",
+    "updatedAt": "2023-02-15T11:34:36.145000Z"
+  }

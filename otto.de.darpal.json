@@ -1,0 +1,575 @@
+{
+    "meta": {
+      "name": "OTTO",
+      "version": 1,
+      "_hash": "d7f5b6e14b516a3b3946a3177efd7f1d359a985fa6e1adbb4ccd935877d51717"
+    },
+    "requestInterface": [
+      {
+        "manual": {
+          "available": false
+        }
+      },
+      {
+        "webinterface": {
+          "available": true,
+          "startUrl": "https://www.otto.de/privacy-personal-data/personal-data-access/download?closeUri=%2F",
+          "authentication": "password",
+          "workflowContainer": {
+            "automationEngine": "automa",
+            "workflow": [
+              {
+                "id": "f1ThTGgCCpJCTAnAn4ORn",
+                "name": "OTTO",
+                "icon": "riGlobalLine",
+                "drawflow": {
+                  "nodes": [
+                    {
+                      "type": "BlockBasic",
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "rDzaXam9HuQSM8hSwbaSi-output-1",
+                            "position": "right",
+                            "x": 195.99999779921305,
+                            "y": 27.999996332021727,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "computedPosition": {
+                        "x": 50,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "position": {
+                        "x": 50,
+                        "y": 300
+                      },
+                      "id": "rDzaXam9HuQSM8hSwbaSi",
+                      "label": "trigger",
+                      "data": {
+                        "disableBlock": false,
+                        "description": "",
+                        "type": "manual",
+                        "interval": 60,
+                        "delay": 5,
+                        "date": "",
+                        "time": "00:00",
+                        "url": "",
+                        "shortcut": "",
+                        "activeInInput": false,
+                        "isUrlRegex": false,
+                        "days": [],
+                        "contextMenuName": "",
+                        "contextTypes": [],
+                        "parameters": [],
+                        "observeElement": {
+                          "selector": "",
+                          "baseSelector": "",
+                          "matchPattern": "",
+                          "targetOptions": {
+                            "subtree": false,
+                            "childList": true,
+                            "attributes": false,
+                            "attributeFilter": [],
+                            "characterData": false
+                          },
+                          "baseElOptions": {
+                            "subtree": false,
+                            "childList": true,
+                            "attributes": false,
+                            "attributeFilter": [],
+                            "characterData": false
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "BlockBasic",
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "wKDYVmf5QNoEfKPAPOoLg-output-1",
+                            "position": "right",
+                            "x": 196.00004474933496,
+                            "y": 27.999996332021727,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "wKDYVmf5QNoEfKPAPOoLg-input-1",
+                            "position": "left",
+                            "x": -20.000000733595655,
+                            "y": 27.999996332021727,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "computedPosition": {
+                        "x": 320,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "id": "wKDYVmf5QNoEfKPAPOoLg",
+                      "label": "new-tab",
+                      "data": {
+                        "disableBlock": false,
+                        "description": "",
+                        "url": "https://www.otto.de/privacy-personal-data/personal-data-access/download?closeUri=%2F",
+                        "userAgent": "",
+                        "active": false,
+                        "inGroup": false,
+                        "waitTabLoaded": true,
+                        "updatePrevTab": false,
+                        "customUserAgent": false
+                      },
+                      "position": {
+                        "y": 300,
+                        "x": 320
+                      },
+                      "selected": false
+                    },
+                    {
+                      "type": "BlockBasic",
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "tDEMJypwK-vyv2rMrjf5K-output-1",
+                            "position": "right",
+                            "x": 196.00004474933496,
+                            "y": 27.999996332021727,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "tDEMJypwK-vyv2rMrjf5K-input-1",
+                            "position": "left",
+                            "x": -20.000000733595655,
+                            "y": 27.999996332021727,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "computedPosition": {
+                        "x": 600,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "id": "tDEMJypwK-vyv2rMrjf5K",
+                      "label": "javascript-code",
+                      "data": {
+                        "disableBlock": false,
+                        "description": "",
+                        "timeout": 20000,
+                        "context": "website",
+                        "code": "\n            const event = (state) => new CustomEvent( '__js-event__', {\n              'detail': {\n                'type': 'to_active',\n                'data': { 'workflow_state': state }\n              }\n            });\n            if (window.location.href == \"https://www.otto.de/privacy-personal-data/personal-data-access/download?closeUri=%2F\"){\n              window.dispatchEvent(event('started'));\n            } else {\n              window.dispatchEvent(event('start-failed'));\n            }",
+                        "preloadScripts": [],
+                        "everyNewTab": false,
+                        "runBeforeLoad": false
+                      },
+                      "position": {
+                        "y": 300,
+                        "x": 600
+                      },
+                      "selected": false
+                    },
+                    {
+                      "type": "BlockBasic",
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "BSXDzztq9qyvn5e5eIk0W-output-1",
+                            "position": "right",
+                            "x": 196.00004474933496,
+                            "y": 27.999996332021727,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "BSXDzztq9qyvn5e5eIk0W-input-1",
+                            "position": "left",
+                            "x": -20.000000733595655,
+                            "y": 27.999996332021727,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "computedPosition": {
+                        "x": 1440,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "id": "BSXDzztq9qyvn5e5eIk0W",
+                      "label": "switch-tab",
+                      "data": {
+                        "disableBlock": false,
+                        "description": "",
+                        "url": "https://www.otto.de/privacy-personal-data/personal-data-access/download?closeUri=%2F",
+                        "tabIndex": 0,
+                        "tabTitle": "",
+                        "matchPattern": "https://www.otto.de/privacy-personal-data/personal-data-access/download?closeUri=%2F",
+                        "activeTab": true,
+                        "createIfNoMatch": true,
+                        "findTabBy": "match-patterns"
+                      },
+                      "position": {
+                        "y": 300,
+                        "x": 1440
+                      }
+                    },
+                    {
+                      "type": "BlockBasic",
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "mk6rtL6u0t3iqghaZaiH_-output-1",
+                            "position": "right",
+                            "x": 196.00004474933496,
+                            "y": 28.000019807082683,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "mk6rtL6u0t3iqghaZaiH_-input-1",
+                            "position": "left",
+                            "x": -20.000000733595655,
+                            "y": 28.000019807082683,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "computedPosition": {
+                        "x": 610,
+                        "y": 450,
+                        "z": 0
+                      },
+                      "id": "mk6rtL6u0t3iqghaZaiH_",
+                      "label": "event-click",
+                      "data": {
+                        "disableBlock": false,
+                        "description": "Anfrage absenden",
+                        "findBy": "xpath",
+                        "waitForSelector": true,
+                        "waitSelectorTimeout": 5000,
+                        "selector": "//BODY/DIV[2]/DIV[1]/SECTION[1]/FORM[1]/DIV[2]/DIV[1]/BUTTON[1]",
+                        "markEl": false,
+                        "multiple": false
+                      },
+                      "position": {
+                        "y": 450,
+                        "x": 610
+                      }
+                    },
+                    {
+                      "type": "BlockBasic",
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "PzAwGSVhqxpSjaUM4_ria-output-1",
+                            "position": "right",
+                            "x": 196.00004474933496,
+                            "y": 28.000019807082683,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "PzAwGSVhqxpSjaUM4_ria-input-1",
+                            "position": "left",
+                            "x": -20.000000733595655,
+                            "y": 28.000019807082683,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "computedPosition": {
+                        "x": 890,
+                        "y": 450,
+                        "z": 0
+                      },
+                      "id": "PzAwGSVhqxpSjaUM4_ria",
+                      "label": "javascript-code",
+                      "data": {
+                        "disableBlock": false,
+                        "description": "",
+                        "timeout": 20000,
+                        "context": "website",
+                        "code": "const event = new CustomEvent( '__js-event__', {\n  'detail': {\n    'type': 'to_active',\n    'data': { 'workflow_state': 'completed' }\n  }\n});\nwindow.dispatchEvent(event);",
+                        "preloadScripts": [],
+                        "everyNewTab": false,
+                        "runBeforeLoad": false
+                      },
+                      "position": {
+                        "y": 450,
+                        "x": 890
+                      }
+                    },
+                    {
+                      "type": "BlockBasic",
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "tMTSPjmoEKSdk8_i1Z5Mp-output-1",
+                            "position": "right",
+                            "x": 196.00004474933496,
+                            "y": 28.000019807082683,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "tMTSPjmoEKSdk8_i1Z5Mp-input-1",
+                            "position": "left",
+                            "x": -20.000000733595655,
+                            "y": 28.000019807082683,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "computedPosition": {
+                        "x": 1170,
+                        "y": 450,
+                        "z": 0
+                      },
+                      "id": "tMTSPjmoEKSdk8_i1Z5Mp",
+                      "label": "close-tab",
+                      "data": {
+                        "disableBlock": false,
+                        "url": "",
+                        "description": "",
+                        "activeTab": true,
+                        "closeType": "tab",
+                        "allWindows": false
+                      },
+                      "position": {
+                        "y": 450,
+                        "x": 1170
+                      }
+                    }
+                  ],
+                  "edges": [
+                    {
+                      "id": "xAwmW7JwbEP9K1ywjNdWn",
+                      "source": "rDzaXam9HuQSM8hSwbaSi",
+                      "target": "wKDYVmf5QNoEfKPAPOoLg",
+                      "targetHandle": "wKDYVmf5QNoEfKPAPOoLg-input-1",
+                      "sourceHandle": "rDzaXam9HuQSM8hSwbaSi-output-1",
+                      "type": "custom",
+                      "z": 0,
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "targetX": 0,
+                      "targetY": 0,
+                      "updatable": true,
+                      "selectable": true,
+                      "markerEnd": "arrowclosed"
+                    },
+                    {
+                      "id": "Ml6e3aHK7TJ__1uBI2R8a",
+                      "target": "tDEMJypwK-vyv2rMrjf5K",
+                      "source": "wKDYVmf5QNoEfKPAPOoLg",
+                      "targetHandle": "tDEMJypwK-vyv2rMrjf5K-input-1",
+                      "sourceHandle": "wKDYVmf5QNoEfKPAPOoLg-output-1",
+                      "type": "custom",
+                      "z": 0,
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "targetX": 0,
+                      "targetY": 0,
+                      "updatable": true,
+                      "selectable": true,
+                      "markerEnd": "arrowclosed"
+                    },
+                    {
+                      "id": "n22Q1s8dq6B0z96wsYK2U",
+                      "target": "PzAwGSVhqxpSjaUM4_ria",
+                      "source": "mk6rtL6u0t3iqghaZaiH_",
+                      "targetHandle": "PzAwGSVhqxpSjaUM4_ria-input-1",
+                      "sourceHandle": "mk6rtL6u0t3iqghaZaiH_-output-1",
+                      "class": "source-mk6rtL6u0t3iqghaZaiH_-output-1 targte-PzAwGSVhqxpSjaUM4_ria-input-1",
+                      "type": "custom",
+                      "z": 0,
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "targetX": 0,
+                      "targetY": 0,
+                      "updatable": true,
+                      "selectable": true,
+                      "markerEnd": "arrowclosed"
+                    },
+                    {
+                      "id": "qVDZNYxfo6SU9YYRaDXmm",
+                      "target": "tMTSPjmoEKSdk8_i1Z5Mp",
+                      "source": "PzAwGSVhqxpSjaUM4_ria",
+                      "targetHandle": "tMTSPjmoEKSdk8_i1Z5Mp-input-1",
+                      "sourceHandle": "PzAwGSVhqxpSjaUM4_ria-output-1",
+                      "class": "source-PzAwGSVhqxpSjaUM4_ria-output-1 targte-tMTSPjmoEKSdk8_i1Z5Mp-input-1",
+                      "type": "custom",
+                      "z": 0,
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "targetX": 0,
+                      "targetY": 0,
+                      "updatable": true,
+                      "selectable": true,
+                      "markerEnd": "arrowclosed"
+                    },
+                    {
+                      "id": "vueflow__edge-wKDYVmf5QNoEfKPAPOoLgwKDYVmf5QNoEfKPAPOoLg-output-1-mk6rtL6u0t3iqghaZaiH_mk6rtL6u0t3iqghaZaiH_-input-1",
+                      "source": "wKDYVmf5QNoEfKPAPOoLg",
+                      "sourceHandle": "wKDYVmf5QNoEfKPAPOoLg-output-1",
+                      "target": "mk6rtL6u0t3iqghaZaiH_",
+                      "targetHandle": "mk6rtL6u0t3iqghaZaiH_-input-1",
+                      "class": "source-wKDYVmf5QNoEfKPAPOoLg-output-1 target-mk6rtL6u0t3iqghaZaiH_-input-1",
+                      "updatable": true,
+                      "type": "custom",
+                      "selectable": true,
+                      "markerEnd": "arrowclosed",
+                      "z": 0,
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "targetX": 0,
+                      "targetY": 0
+                    }
+                  ],
+                  "position": [
+                    -367,
+                    65.00000000000006
+                  ],
+                  "zoom": 1.3
+                },
+                "table": [],
+                "dataColumns": [],
+                "description": "",
+                "trigger": {
+                  "disableBlock": false,
+                  "description": "",
+                  "type": "manual",
+                  "interval": 60,
+                  "delay": 5,
+                  "date": "",
+                  "time": "00:00",
+                  "url": "",
+                  "shortcut": "",
+                  "activeInInput": false,
+                  "isUrlRegex": false,
+                  "days": [],
+                  "contextMenuName": "",
+                  "contextTypes": [],
+                  "parameters": [],
+                  "observeElement": {
+                    "selector": "",
+                    "baseSelector": "",
+                    "matchPattern": "",
+                    "targetOptions": {
+                      "subtree": false,
+                      "childList": true,
+                      "attributes": false,
+                      "attributeFilter": [],
+                      "characterData": false
+                    },
+                    "baseElOptions": {
+                      "subtree": false,
+                      "childList": true,
+                      "attributes": false,
+                      "attributeFilter": [],
+                      "characterData": false
+                    }
+                  }
+                },
+                "createdAt": 1674138486231,
+                "updatedAt": 1674517829325,
+                "isDisabled": false,
+                "settings": {
+                  "publicId": "",
+                  "blockDelay": 0,
+                  "saveLog": true,
+                  "debugMode": false,
+                  "restartTimes": 3,
+                  "notification": true,
+                  "execContext": "popup",
+                  "reuseLastState": false,
+                  "inputAutocomplete": true,
+                  "onError": "stop-workflow",
+                  "executedBlockOnWeb": false,
+                  "insertDefaultColumn": false,
+                  "defaultColumnName": "column"
+                },
+                "version": "1.23.4.1",
+                "globalData": "{\n\t\"key\": \"value\"\n}"
+              }
+            ],
+            "version": 0,
+            "verified": true
+          }
+        }
+      },
+      {
+        "api": {
+          "available": false
+        }
+      }
+    ],
+    "requestParameter": {
+      "timeRange": {
+        "allTime": true,
+        "customRange": {
+          "available": false
+        }
+      },
+      "mediaQuality": [
+        "medium"
+      ],
+      "dataFormat": [
+        "CSV"
+      ]
+    },
+    "createdAt": "2023-02-15T11:34:36.150000Z",
+    "updatedAt": "2023-02-15T11:34:36.150000Z"
+  }

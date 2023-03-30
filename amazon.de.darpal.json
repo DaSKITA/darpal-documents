@@ -1,0 +1,802 @@
+{
+    "meta": {
+      "name": "Amazon",
+      "version": 1,
+      "_hash": "1d9a05c7bc9db3a866b9ca2d604aba48dbd70b2d515cdf9e1c09545347eeea61"
+    },
+    "requestInterface": [
+      {
+        "manual": {
+          "available": false
+        }
+      },
+      {
+        "webinterface": {
+          "available": true,
+          "startUrl": "https://www.amazon.de/gp/privacycentral/dsar/create.html?data-category=all-data-categories",
+          "authentication": "password",
+          "workflowContainer": {
+            "automationEngine": "automa",
+            "workflow": [
+              {
+                "extVersion": "1.19.0",
+                "name": "Amazon",
+                "id": "HHT4_mPC6X00mQ8uMQi99",
+                "icon": "riGlobalLine",
+                "table": [],
+                "version": "1.19.0",
+                "drawflow": {
+                  "nodes": [
+                    {
+                      "computedPosition": {
+                        "x": 96,
+                        "y": 97,
+                        "z": 0
+                      },
+                      "data": {
+                        "activeInInput": false,
+                        "contextMenuName": "",
+                        "contextTypes": [],
+                        "date": "",
+                        "days": [],
+                        "delay": 5,
+                        "description": "",
+                        "disableBlock": false,
+                        "interval": 60,
+                        "isUrlRegex": false,
+                        "observeElement": {
+                          "baseElOptions": {
+                            "attributeFilter": [],
+                            "attributes": false,
+                            "characterData": false,
+                            "childList": true,
+                            "subtree": false
+                          },
+                          "baseSelector": "",
+                          "matchPattern": "",
+                          "selector": "",
+                          "targetOptions": {
+                            "attributeFilter": [],
+                            "attributes": false,
+                            "characterData": false,
+                            "childList": true,
+                            "subtree": false
+                          }
+                        },
+                        "shortcut": "",
+                        "time": "00:00",
+                        "type": "manual",
+                        "url": ""
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "IOVhWGxGnJb7Q1rQv4Cjv-output-1",
+                            "position": "right",
+                            "x": 196.00000986258192,
+                            "y": 28.00001176198324,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "IOVhWGxGnJb7Q1rQv4Cjv",
+                      "label": "trigger",
+                      "position": {
+                        "x": 96,
+                        "y": 97
+                      },
+                      "selected": false,
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 388,
+                        "y": 97,
+                        "z": 0
+                      },
+                      "data": {
+                        "disableBlock": false,
+                        "description": "Go to request page",
+                        "url": "https://www.amazon.de/gp/privacycentral/dsar/create.html?data-category=all-data-categories",
+                        "userAgent": "",
+                        "active": false,
+                        "inGroup": false,
+                        "waitTabLoaded": false,
+                        "updatePrevTab": false,
+                        "customUserAgent": false
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "drOrv1sbmNv0EHk6BUzvc-output-1",
+                            "position": "right",
+                            "x": 196.00000986258192,
+                            "y": 28.00001176198324,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "drOrv1sbmNv0EHk6BUzvc-input-1",
+                            "position": "left",
+                            "x": -19.999977342287703,
+                            "y": 28.00001176198324,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "drOrv1sbmNv0EHk6BUzvc",
+                      "label": "new-tab",
+                      "position": {
+                        "x": 388,
+                        "y": 97
+                      },
+                      "selected": false,
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 681.5,
+                        "y": 97,
+                        "z": 0
+                      },
+                      "data": {
+                        "disableBlock": false,
+                        "description": "",
+                        "findBy": "cssSelector",
+                        "selector": "div#dsar-center",
+                        "tryCount": 1,
+                        "timeout": 500,
+                        "markEl": false,
+                        "throwError": false
+                      },
+                      "dimensions": {
+                        "width": 195,
+                        "height": 145
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "vjrv305-output-1",
+                            "position": "right",
+                            "x": 199.00003182888034,
+                            "y": 64.59374283949535,
+                            "width": 16,
+                            "height": 16
+                          },
+                          {
+                            "id": "vjrv305-output-2",
+                            "position": "right",
+                            "x": 199.00003182888034,
+                            "y": 109.187508336703,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "vjrv305-input-1",
+                            "position": "left",
+                            "x": -19.999977342287703,
+                            "y": 64.59374283949535,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "vjrv305",
+                      "label": "element-exists",
+                      "position": {
+                        "x": 681.5,
+                        "y": 97
+                      },
+                      "selected": false,
+                      "type": "BlockElementExists"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 976.6077473958335,
+                        "y": 202.19791666666666,
+                        "z": 0
+                      },
+                      "data": {
+                        "code": "const event = new CustomEvent( '__js-event__', {\n  'detail': {\n    'type': 'to_active',\n    'data': { 'workflow_state': 'interaction-needed' }\n  }\n});\nwindow.dispatchEvent(event);",
+                        "description": "Send interaction required signal",
+                        "disableBlock": false,
+                        "everyNewTab": false,
+                        "preloadScripts": [],
+                        "runBeforeLoad": false,
+                        "timeout": 20000
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "08sultw-output-1",
+                            "position": "right",
+                            "x": 195.99985307455063,
+                            "y": 28.000014056762062,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "08sultw-input-1",
+                            "position": "left",
+                            "x": -20.00008714199066,
+                            "y": 28.000014056762062,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "08sultw",
+                      "label": "javascript-code",
+                      "position": {
+                        "x": 976.6077473958335,
+                        "y": 202.19791666666666
+                      },
+                      "selected": false,
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 1876.29296875,
+                        "y": 312.5325520833333,
+                        "z": 0
+                      },
+                      "data": {
+                        "code": "const event = new CustomEvent( '__js-event__', {\n  'detail': {\n    'type': 'to_active',\n    'data': { 'workflow_state': 'completed' }\n  }\n});\nwindow.dispatchEvent(event);",
+                        "description": "Send completed signal",
+                        "disableBlock": false,
+                        "everyNewTab": false,
+                        "preloadScripts": [],
+                        "runBeforeLoad": false,
+                        "timeout": 20000
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "zy1vaif-output-1",
+                            "position": "right",
+                            "x": 195.99995930989584,
+                            "y": 28.000030517578125,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "zy1vaif-input-1",
+                            "position": "left",
+                            "x": -20,
+                            "y": 28.000030517578125,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "zy1vaif",
+                      "label": "javascript-code",
+                      "position": {
+                        "x": 1876.29296875,
+                        "y": 312.5325520833333
+                      },
+                      "selected": false,
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 2168.29296875,
+                        "y": 312.5325520833333,
+                        "z": 0
+                      },
+                      "data": {
+                        "activeTab": true,
+                        "allWindows": false,
+                        "closeType": "tab",
+                        "description": "",
+                        "disableBlock": false,
+                        "url": ""
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "7ktpjsp-output-1",
+                            "position": "right",
+                            "x": 195.99995930989584,
+                            "y": 28.000030517578125,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "7ktpjsp-input-1",
+                            "position": "left",
+                            "x": -20,
+                            "y": 28.000030517578125,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "7ktpjsp",
+                      "label": "close-tab",
+                      "position": {
+                        "x": 2168.29296875,
+                        "y": 312.5325520833333
+                      },
+                      "selected": false,
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "type": "BlockElementExists",
+                      "dimensions": {
+                        "width": 195,
+                        "height": 145
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "5odz5u6-output-1",
+                            "position": "right",
+                            "x": 198.99995935757957,
+                            "y": 64.59374283949535,
+                            "width": 16,
+                            "height": 16
+                          },
+                          {
+                            "id": "5odz5u6-output-2",
+                            "position": "right",
+                            "x": 198.99995935757957,
+                            "y": 109.18747210105262,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "5odz5u6-input-1",
+                            "position": "left",
+                            "x": -19.999904870986942,
+                            "y": 64.59374283949535,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "computedPosition": {
+                        "x": 1563.5,
+                        "y": 97,
+                        "z": 0
+                      },
+                      "position": {
+                        "x": 1563.5,
+                        "y": 97
+                      },
+                      "label": "element-exists",
+                      "data": {
+                        "disableBlock": false,
+                        "description": "",
+                        "findBy": "cssSelector",
+                        "selector": "#create-pending-confirmation-alert",
+                        "tryCount": 1,
+                        "timeout": 500,
+                        "markEl": false,
+                        "throwError": false
+                      },
+                      "id": "5odz5u6",
+                      "selected": false
+                    },
+                    {
+                      "type": "BlockBasic",
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "slu8sz4-output-1",
+                            "position": "right",
+                            "x": 195.99995930989584,
+                            "y": 28.000030517578125,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "slu8sz4-input-1",
+                            "position": "left",
+                            "x": -20,
+                            "y": 28.000030517578125,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "computedPosition": {
+                        "x": 1857,
+                        "y": 158,
+                        "z": 0
+                      },
+                      "data": {
+                        "disableBlock": false,
+                        "description": "Send request pending signal",
+                        "timeout": 20000,
+                        "code": "const event = new CustomEvent( '__js-event__', {\n  'detail': {\n    'type': 'to_active',\n    'data': { 'workflow_state': 'request-pending' }\n  }\n});\nwindow.dispatchEvent(event);",
+                        "preloadScripts": [],
+                        "everyNewTab": false,
+                        "runBeforeLoad": false
+                      },
+                      "label": "javascript-code",
+                      "id": "slu8sz4",
+                      "selected": false,
+                      "position": {
+                        "x": 1857,
+                        "y": 158
+                      }
+                    },
+                    {
+                      "type": "BlockBasic",
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "32nfb0f-output-1",
+                            "position": "right",
+                            "x": 196.00016276041669,
+                            "y": 28.000030517578125,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "32nfb0f-input-1",
+                            "position": "left",
+                            "x": -20,
+                            "y": 28.000030517578125,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "computedPosition": {
+                        "x": 2149,
+                        "y": 158,
+                        "z": 0
+                      },
+                      "data": {
+                        "activeTab": true,
+                        "allWindows": false,
+                        "closeType": "tab",
+                        "description": "",
+                        "disableBlock": false,
+                        "url": ""
+                      },
+                      "label": "close-tab",
+                      "id": "32nfb0f",
+                      "selected": false,
+                      "position": {
+                        "x": 2149,
+                        "y": 158
+                      }
+                    },
+                    {
+                      "type": "BlockElementExists",
+                      "dimensions": {
+                        "width": 195,
+                        "height": 145
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "vtyc9io-output-1",
+                            "position": "right",
+                            "x": 199.00015072027844,
+                            "y": 64.59378335873286,
+                            "width": 16,
+                            "height": 16
+                          },
+                          {
+                            "id": "vtyc9io-output-2",
+                            "position": "right",
+                            "x": 199.00015072027844,
+                            "y": 109.18757770458858,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "vtyc9io-input-1",
+                            "position": "left",
+                            "x": -19.999890883763634,
+                            "y": 64.59378335873286,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "computedPosition": {
+                        "x": 1270.1077473958333,
+                        "y": 237.56835937499994,
+                        "z": 0
+                      },
+                      "data": {
+                        "disableBlock": false,
+                        "description": "",
+                        "findBy": "cssSelector",
+                        "selector": "div#dsar-center",
+                        "tryCount": 10,
+                        "timeout": 1000,
+                        "markEl": false,
+                        "throwError": false
+                      },
+                      "label": "element-exists",
+                      "id": "vtyc9io",
+                      "selected": false,
+                      "position": {
+                        "x": 1270.1077473958333,
+                        "y": 237.56835937499994
+                      }
+                    }
+                  ],
+                  "edges": [
+                    {
+                      "id": "SRSRXPrrKhOlaXIhCffAX",
+                      "class": "source-IOVhWGxGnJb7Q1rQv4Cjv-output-1 targte-drOrv1sbmNv0EHk6BUzvc-input-1",
+                      "markerEnd": "",
+                      "selectable": true,
+                      "source": "IOVhWGxGnJb7Q1rQv4Cjv",
+                      "sourceHandle": "IOVhWGxGnJb7Q1rQv4Cjv-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "drOrv1sbmNv0EHk6BUzvc",
+                      "targetHandle": "drOrv1sbmNv0EHk6BUzvc-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "default",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "vueflow__edge-drOrv1sbmNv0EHk6BUzvcdrOrv1sbmNv0EHk6BUzvc-output-1-vjrv305vjrv305-input-1",
+                      "class": "source-drOrv1sbmNv0EHk6BUzvc-output-1 target-vjrv305-input-1",
+                      "markerEnd": "",
+                      "selectable": true,
+                      "source": "drOrv1sbmNv0EHk6BUzvc",
+                      "sourceHandle": "drOrv1sbmNv0EHk6BUzvc-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "vjrv305",
+                      "targetHandle": "vjrv305-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "default",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "vueflow__edge-vjrv305vjrv305-output-2-08sultw08sultw-input-1",
+                      "class": "source-vjrv305-output-2 target-08sultw-input-1",
+                      "markerEnd": "",
+                      "selectable": true,
+                      "source": "vjrv305",
+                      "sourceHandle": "vjrv305-output-2",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "08sultw",
+                      "targetHandle": "08sultw-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "default",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "vueflow__edge-zy1vaifzy1vaif-output-1-7ktpjsp7ktpjsp-input-1",
+                      "source": "zy1vaif",
+                      "sourceHandle": "zy1vaif-output-1",
+                      "target": "7ktpjsp",
+                      "targetHandle": "7ktpjsp-input-1",
+                      "class": "source-zy1vaif-output-1 target-7ktpjsp-input-1",
+                      "updatable": true,
+                      "selectable": true,
+                      "type": "default",
+                      "markerEnd": "",
+                      "z": 0,
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "targetX": 0,
+                      "targetY": 0,
+                      "selected": false
+                    },
+                    {
+                      "id": "vueflow__edge-vjrv305vjrv305-output-1-5odz5u65odz5u6-input-1",
+                      "source": "vjrv305",
+                      "sourceHandle": "vjrv305-output-1",
+                      "target": "5odz5u6",
+                      "targetHandle": "5odz5u6-input-1",
+                      "class": "source-vjrv305-output-1 target-5odz5u6-input-1",
+                      "updatable": true,
+                      "selectable": true,
+                      "type": "default",
+                      "markerEnd": "",
+                      "z": 0,
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "targetX": 0,
+                      "targetY": 0
+                    },
+                    {
+                      "id": "vueflow__edge-5odz5u65odz5u6-output-2-zy1vaifzy1vaif-input-1",
+                      "source": "5odz5u6",
+                      "sourceHandle": "5odz5u6-output-2",
+                      "target": "zy1vaif",
+                      "targetHandle": "zy1vaif-input-1",
+                      "class": "source-5odz5u6-output-2 target-zy1vaif-input-1",
+                      "updatable": true,
+                      "selectable": true,
+                      "type": "default",
+                      "markerEnd": "",
+                      "z": 0,
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "targetX": 0,
+                      "targetY": 0,
+                      "selected": false
+                    },
+                    {
+                      "id": "vueflow__edge-slu8sz4slu8sz4-output-1-32nfb0f32nfb0f-input-1",
+                      "source": "slu8sz4",
+                      "sourceHandle": "slu8sz4-output-1",
+                      "target": "32nfb0f",
+                      "targetHandle": "32nfb0f-input-1",
+                      "class": "source-slu8sz4-output-1 target-32nfb0f-input-1",
+                      "updatable": true,
+                      "selectable": true,
+                      "type": "default",
+                      "markerEnd": "",
+                      "z": 0,
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "targetX": 0,
+                      "targetY": 0,
+                      "selected": false
+                    },
+                    {
+                      "id": "vueflow__edge-5odz5u65odz5u6-output-1-slu8sz4slu8sz4-input-1",
+                      "source": "5odz5u6",
+                      "sourceHandle": "5odz5u6-output-1",
+                      "target": "slu8sz4",
+                      "targetHandle": "slu8sz4-input-1",
+                      "class": "source-5odz5u6-output-1 target-slu8sz4-input-1",
+                      "updatable": true,
+                      "selectable": true,
+                      "type": "default",
+                      "markerEnd": "",
+                      "z": 0,
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "targetX": 0,
+                      "targetY": 0,
+                      "selected": false
+                    },
+                    {
+                      "id": "vueflow__edge-08sultw08sultw-output-1-vtyc9iovtyc9io-input-1",
+                      "source": "08sultw",
+                      "sourceHandle": "08sultw-output-1",
+                      "target": "vtyc9io",
+                      "targetHandle": "vtyc9io-input-1",
+                      "class": "source-08sultw-output-1 target-vtyc9io-input-1",
+                      "updatable": true,
+                      "selectable": true,
+                      "type": "default",
+                      "markerEnd": "",
+                      "z": 0,
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "targetX": 0,
+                      "targetY": 0
+                    },
+                    {
+                      "id": "vueflow__edge-vtyc9iovtyc9io-output-1-5odz5u65odz5u6-input-1",
+                      "source": "vtyc9io",
+                      "sourceHandle": "vtyc9io-output-1",
+                      "target": "5odz5u6",
+                      "targetHandle": "5odz5u6-input-1",
+                      "class": "source-vtyc9io-output-1 target-5odz5u6-input-1",
+                      "updatable": true,
+                      "selectable": true,
+                      "type": "default",
+                      "markerEnd": "",
+                      "z": 0,
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "targetX": 0,
+                      "targetY": 0
+                    }
+                  ],
+                  "position": [
+                    -156.12968749999982,
+                    297.10927734374997
+                  ],
+                  "zoom": 0.6
+                },
+                "settings": {
+                  "blockDelay": 0,
+                  "debugMode": false,
+                  "defaultColumnName": "column",
+                  "executedBlockOnWeb": false,
+                  "inputAutocomplete": true,
+                  "insertDefaultColumn": false,
+                  "notification": true,
+                  "onError": "stop-workflow",
+                  "publicId": "",
+                  "restartTimes": 3,
+                  "reuseLastState": false,
+                  "saveLog": true
+                },
+                "globalData": "{\n\t\"key\": \"value\"\n}",
+                "description": "",
+                "includedWorkflows": {}
+              }
+            ],
+            "version": 0,
+            "verified": true
+          }
+        }
+      },
+      {
+        "api": {
+          "available": false
+        }
+      }
+    ],
+    "requestParameter": {
+      "timeRange": {
+        "allTime": true,
+        "customRange": {
+          "available": false
+        }
+      },
+      "mediaQuality": [
+        "medium"
+      ],
+      "dataFormat": [
+        "CSV"
+      ]
+    },
+    "createdAt": "2023-02-15T11:34:36.110000Z",
+    "updatedAt": "2023-02-15T11:34:36.110000Z"
+  }

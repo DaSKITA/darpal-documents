@@ -1,0 +1,525 @@
+  {
+    "meta": {
+      "name": "EA Games",
+      "version": 1,
+      "_hash": "b61e3ea46b308f51e0e1bcfb346bd9811a17672ced50080cd8598a78e41aec33"
+    },
+    "requestInterface": [
+      {
+        "manual": {
+          "available": false
+        }
+      },
+      {
+        "webinterface": {
+          "available": true,
+          "startUrl": "https://myaccount.ea.com/cp-ui/downloaddata/index",
+          "authentication": "password",
+          "workflowContainer": {
+            "automationEngine": "automa",
+            "workflow": [
+              {
+                "id": "olFrFF7itBK_XimKqI-Nb",
+                "name": "EA Games",
+                "icon": "riGlobalLine",
+                "drawflow": {
+                  "nodes": [
+                    {
+                      "type": "BlockBasic",
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "VePAnhy8Jm-xIKcWky3Os-output-1",
+                            "position": "right",
+                            "x": 195.99999779921305,
+                            "y": 28.000019807082683,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "computedPosition": {
+                        "x": 50,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "position": {
+                        "x": 50,
+                        "y": 300
+                      },
+                      "id": "VePAnhy8Jm-xIKcWky3Os",
+                      "label": "trigger",
+                      "data": {
+                        "disableBlock": false,
+                        "description": "",
+                        "type": "manual",
+                        "interval": 60,
+                        "delay": 5,
+                        "date": "",
+                        "time": "00:00",
+                        "url": "",
+                        "shortcut": "",
+                        "activeInInput": false,
+                        "isUrlRegex": false,
+                        "days": [],
+                        "contextMenuName": "",
+                        "contextTypes": [],
+                        "parameters": [],
+                        "observeElement": {
+                          "selector": "",
+                          "baseSelector": "",
+                          "matchPattern": "",
+                          "targetOptions": {
+                            "subtree": false,
+                            "childList": true,
+                            "attributes": false,
+                            "attributeFilter": [],
+                            "characterData": false
+                          },
+                          "baseElOptions": {
+                            "subtree": false,
+                            "childList": true,
+                            "attributes": false,
+                            "attributeFilter": [],
+                            "characterData": false
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "BlockBasic",
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "gWcXHFyizJ31j9DY2XxJh-output-1",
+                            "position": "right",
+                            "x": 196.0000095367435,
+                            "y": 28.000019807082683,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "gWcXHFyizJ31j9DY2XxJh-input-1",
+                            "position": "left",
+                            "x": -20.000000733595655,
+                            "y": 28.000019807082683,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "computedPosition": {
+                        "x": 320,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "id": "gWcXHFyizJ31j9DY2XxJh",
+                      "label": "new-tab",
+                      "data": {
+                        "disableBlock": false,
+                        "description": "",
+                        "url": "https://myaccount.ea.com/cp-ui/downloaddata/index",
+                        "userAgent": "",
+                        "active": false,
+                        "inGroup": false,
+                        "waitTabLoaded": true,
+                        "updatePrevTab": false,
+                        "customUserAgent": false
+                      },
+                      "position": {
+                        "y": 300,
+                        "x": 320
+                      },
+                      "selected": false
+                    },
+                    {
+                      "type": "BlockBasic",
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "PAIgGsV3JII2DTqMXt2on-output-1",
+                            "position": "right",
+                            "x": 196.0000095367435,
+                            "y": 28.000019807082683,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "PAIgGsV3JII2DTqMXt2on-input-1",
+                            "position": "left",
+                            "x": -20.000000733595655,
+                            "y": 28.000019807082683,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "computedPosition": {
+                        "x": 560.3988787987455,
+                        "y": 142.96107109847347,
+                        "z": 1000
+                      },
+                      "id": "PAIgGsV3JII2DTqMXt2on",
+                      "label": "javascript-code",
+                      "data": {
+                        "disableBlock": false,
+                        "description": "",
+                        "timeout": 20000,
+                        "context": "website",
+                        "code": "\n            const event = (state) => new CustomEvent( '__js-event__', {\n              'detail': {\n                'type': 'to_active',\n                'data': { 'workflow_state': state }\n              }\n            });\n            if (window.location.href == \"https://myaccount.ea.com/cp-ui/downloaddata/index\"){\n              window.dispatchEvent(event('started'));\n            } else {\n              window.dispatchEvent(event('start-failed'));\n            }",
+                        "preloadScripts": [],
+                        "everyNewTab": false,
+                        "runBeforeLoad": false
+                      },
+                      "position": {
+                        "x": 560.3988787987455,
+                        "y": 142.96107109847347
+                      },
+                      "selected": true
+                    },
+                    {
+                      "type": "BlockBasic",
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "xqrm0ao0qJP5SEvPi9B3d-output-1",
+                            "position": "right",
+                            "x": 195.99999779921305,
+                            "y": 28.000019807082683,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "xqrm0ao0qJP5SEvPi9B3d-input-1",
+                            "position": "left",
+                            "x": -20.000000733595655,
+                            "y": 28.000019807082683,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "computedPosition": {
+                        "x": 880,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "id": "xqrm0ao0qJP5SEvPi9B3d",
+                      "label": "event-click",
+                      "data": {
+                        "disableBlock": false,
+                        "description": "Download anfordern",
+                        "findBy": "xpath",
+                        "waitForSelector": true,
+                        "waitSelectorTimeout": 5000,
+                        "selector": "//BODY/DIV[3]/DIV[3]/DIV[1]/DIV[1]/FORM[1]/DIV[2]/A[1]/SPAN[1]",
+                        "markEl": false,
+                        "multiple": false
+                      },
+                      "position": {
+                        "y": 300,
+                        "x": 880
+                      },
+                      "selected": false
+                    },
+                    {
+                      "type": "BlockBasic",
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "21hlKq_DO3YJhDP1pEmCb-output-1",
+                            "position": "right",
+                            "x": 195.99999779921305,
+                            "y": 28.000019807082683,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "21hlKq_DO3YJhDP1pEmCb-input-1",
+                            "position": "left",
+                            "x": -20.000000733595655,
+                            "y": 28.000019807082683,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "computedPosition": {
+                        "x": 1160,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "id": "21hlKq_DO3YJhDP1pEmCb",
+                      "label": "javascript-code",
+                      "data": {
+                        "disableBlock": false,
+                        "description": "",
+                        "timeout": 20000,
+                        "context": "website",
+                        "code": "const event = new CustomEvent( '__js-event__', {\n  'detail': {\n    'type': 'to_active',\n    'data': { 'workflow_state': 'completed' }\n  }\n});\nwindow.dispatchEvent(event);",
+                        "preloadScripts": [],
+                        "everyNewTab": false,
+                        "runBeforeLoad": false
+                      },
+                      "position": {
+                        "y": 300,
+                        "x": 1160
+                      }
+                    },
+                    {
+                      "type": "BlockBasic",
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "WXuOwyDZh9N0Y_jaGlzI8-output-1",
+                            "position": "right",
+                            "x": 196.00004474933496,
+                            "y": 28.000019807082683,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "WXuOwyDZh9N0Y_jaGlzI8-input-1",
+                            "position": "left",
+                            "x": -20.000000733595655,
+                            "y": 28.000019807082683,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "computedPosition": {
+                        "x": 1440,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "id": "WXuOwyDZh9N0Y_jaGlzI8",
+                      "label": "close-tab",
+                      "data": {
+                        "disableBlock": false,
+                        "url": "",
+                        "description": "",
+                        "activeTab": true,
+                        "closeType": "tab",
+                        "allWindows": false
+                      },
+                      "position": {
+                        "y": 300,
+                        "x": 1440
+                      }
+                    }
+                  ],
+                  "edges": [
+                    {
+                      "id": "FkwzJjl7dY8Y--rw-m92e",
+                      "source": "VePAnhy8Jm-xIKcWky3Os",
+                      "target": "gWcXHFyizJ31j9DY2XxJh",
+                      "targetHandle": "gWcXHFyizJ31j9DY2XxJh-input-1",
+                      "sourceHandle": "VePAnhy8Jm-xIKcWky3Os-output-1",
+                      "type": "custom",
+                      "z": 0,
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "targetX": 0,
+                      "targetY": 0,
+                      "updatable": true,
+                      "selectable": true,
+                      "markerEnd": "arrowclosed"
+                    },
+                    {
+                      "id": "CwLJ-w2Io0furjE9l1gIo",
+                      "target": "PAIgGsV3JII2DTqMXt2on",
+                      "source": "gWcXHFyizJ31j9DY2XxJh",
+                      "targetHandle": "PAIgGsV3JII2DTqMXt2on-input-1",
+                      "sourceHandle": "gWcXHFyizJ31j9DY2XxJh-output-1",
+                      "class": "connected-edges",
+                      "type": "custom",
+                      "z": 0,
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "targetX": 0,
+                      "targetY": 0,
+                      "updatable": true,
+                      "selectable": true,
+                      "markerEnd": "arrowclosed"
+                    },
+                    {
+                      "id": "zzNf8gg8NgsNvyIBQpZj6",
+                      "target": "21hlKq_DO3YJhDP1pEmCb",
+                      "source": "xqrm0ao0qJP5SEvPi9B3d",
+                      "targetHandle": "21hlKq_DO3YJhDP1pEmCb-input-1",
+                      "sourceHandle": "xqrm0ao0qJP5SEvPi9B3d-output-1",
+                      "type": "custom",
+                      "z": 0,
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "targetX": 0,
+                      "targetY": 0,
+                      "updatable": true,
+                      "selectable": true,
+                      "markerEnd": "arrowclosed"
+                    },
+                    {
+                      "id": "6eZNWUG5Gj3wHPZ9fZBJi",
+                      "target": "WXuOwyDZh9N0Y_jaGlzI8",
+                      "source": "21hlKq_DO3YJhDP1pEmCb",
+                      "targetHandle": "WXuOwyDZh9N0Y_jaGlzI8-input-1",
+                      "sourceHandle": "21hlKq_DO3YJhDP1pEmCb-output-1",
+                      "class": "source-21hlKq_DO3YJhDP1pEmCb-output-1 targte-WXuOwyDZh9N0Y_jaGlzI8-input-1",
+                      "type": "custom",
+                      "z": 0,
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "targetX": 0,
+                      "targetY": 0,
+                      "updatable": true,
+                      "selectable": true,
+                      "markerEnd": "arrowclosed"
+                    },
+                    {
+                      "id": "vueflow__edge-gWcXHFyizJ31j9DY2XxJhgWcXHFyizJ31j9DY2XxJh-output-1-xqrm0ao0qJP5SEvPi9B3dxqrm0ao0qJP5SEvPi9B3d-input-1",
+                      "source": "gWcXHFyizJ31j9DY2XxJh",
+                      "sourceHandle": "gWcXHFyizJ31j9DY2XxJh-output-1",
+                      "target": "xqrm0ao0qJP5SEvPi9B3d",
+                      "targetHandle": "xqrm0ao0qJP5SEvPi9B3d-input-1",
+                      "class": "source-gWcXHFyizJ31j9DY2XxJh-output-1 target-xqrm0ao0qJP5SEvPi9B3d-input-1",
+                      "updatable": true,
+                      "type": "custom",
+                      "selectable": true,
+                      "markerEnd": "arrowclosed",
+                      "z": 0,
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "targetX": 0,
+                      "targetY": 0
+                    }
+                  ],
+                  "position": [
+                    8.52098710430721,
+                    83.16482792522152
+                  ],
+                  "zoom": 0.7323024985232314
+                },
+                "table": [],
+                "dataColumns": [],
+                "description": "",
+                "trigger": {
+                  "disableBlock": false,
+                  "description": "",
+                  "type": "manual",
+                  "interval": 60,
+                  "delay": 5,
+                  "date": "",
+                  "time": "00:00",
+                  "url": "",
+                  "shortcut": "",
+                  "activeInInput": false,
+                  "isUrlRegex": false,
+                  "days": [],
+                  "contextMenuName": "",
+                  "contextTypes": [],
+                  "parameters": [],
+                  "observeElement": {
+                    "selector": "",
+                    "baseSelector": "",
+                    "matchPattern": "",
+                    "targetOptions": {
+                      "subtree": false,
+                      "childList": true,
+                      "attributes": false,
+                      "attributeFilter": [],
+                      "characterData": false
+                    },
+                    "baseElOptions": {
+                      "subtree": false,
+                      "childList": true,
+                      "attributes": false,
+                      "attributeFilter": [],
+                      "characterData": false
+                    }
+                  }
+                },
+                "createdAt": 1674213938855,
+                "updatedAt": 1674517785802,
+                "isDisabled": false,
+                "settings": {
+                  "publicId": "",
+                  "blockDelay": 0,
+                  "saveLog": true,
+                  "debugMode": false,
+                  "restartTimes": 3,
+                  "notification": true,
+                  "execContext": "popup",
+                  "reuseLastState": false,
+                  "inputAutocomplete": true,
+                  "onError": "stop-workflow",
+                  "executedBlockOnWeb": false,
+                  "insertDefaultColumn": false,
+                  "defaultColumnName": "column"
+                },
+                "version": "1.23.4.1",
+                "globalData": "{\n\t\"key\": \"value\"\n}"
+              }
+            ],
+            "version": 0,
+            "verified": true
+          }
+        }
+      },
+      {
+        "api": {
+          "available": false
+        }
+      }
+    ],
+    "requestParameter": {
+      "timeRange": {
+        "allTime": true,
+        "customRange": {
+          "available": false
+        }
+      },
+      "mediaQuality": [
+        "medium"
+      ],
+      "dataFormat": [
+        "CSV"
+      ]
+    },
+    "createdAt": "2023-02-15T11:34:36.162000Z",
+    "updatedAt": "2023-02-15T11:34:36.162000Z"
+  }

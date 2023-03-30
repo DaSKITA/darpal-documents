@@ -1,0 +1,881 @@
+{
+    "meta": {
+      "name": "Google",
+      "version": 1,
+      "_hash": "9fdd2132815a25c6c1dbae336cebae4f6f6611446671da37e34cc0f25fae13e1"
+    },
+    "requestInterface": [
+      {
+        "manual": {
+          "available": false
+        }
+      },
+      {
+        "webinterface": {
+          "available": true,
+          "startUrl": "https://takeout.google.com/",
+          "authentication": "password",
+          "workflowContainer": {
+            "automationEngine": "automa",
+            "workflow": [
+              {
+                "description": "",
+                "drawflow": {
+                  "nodes": [
+                    {
+                      "computedPosition": {
+                        "x": 96,
+                        "y": 36,
+                        "z": 0
+                      },
+                      "data": {
+                        "activeInInput": false,
+                        "contextMenuName": "",
+                        "contextTypes": [],
+                        "date": "",
+                        "days": [],
+                        "delay": 5,
+                        "description": "",
+                        "disableBlock": false,
+                        "interval": 60,
+                        "isUrlRegex": false,
+                        "observeElement": {
+                          "baseElOptions": {
+                            "attributeFilter": [],
+                            "attributes": false,
+                            "characterData": false,
+                            "childList": true,
+                            "subtree": false
+                          },
+                          "baseSelector": "",
+                          "matchPattern": "",
+                          "selector": "",
+                          "targetOptions": {
+                            "attributeFilter": [],
+                            "attributes": false,
+                            "characterData": false,
+                            "childList": true,
+                            "subtree": false
+                          }
+                        },
+                        "shortcut": "",
+                        "time": "00:00",
+                        "type": "manual",
+                        "url": ""
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "w8mVgv2A0WjHWMafV8sCM-output-1",
+                            "position": "right",
+                            "x": 195.99657929018204,
+                            "y": 27.981855005946684,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "w8mVgv2A0WjHWMafV8sCM",
+                      "label": "trigger",
+                      "position": {
+                        "x": 96,
+                        "y": 36
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 388,
+                        "y": 36,
+                        "z": 0
+                      },
+                      "data": {
+                        "active": false,
+                        "customUserAgent": false,
+                        "description": "",
+                        "disableBlock": false,
+                        "inGroup": false,
+                        "onError": {
+                          "dataToInsert": [],
+                          "enable": false,
+                          "insertData": false,
+                          "retry": false,
+                          "retryInterval": 2,
+                          "retryTimes": 1,
+                          "toDo": "error"
+                        },
+                        "updatePrevTab": false,
+                        "url": "https://takeout.google.com/",
+                        "userAgent": "",
+                        "waitTabLoaded": true
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "-fKQEarOlHLrmPXLrncsX-output-1",
+                            "position": "right",
+                            "x": 196.01726649626093,
+                            "y": 27.981855005946684,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "-fKQEarOlHLrmPXLrncsX-input-1",
+                            "position": "left",
+                            "x": -19.99585665490121,
+                            "y": 27.981855005946684,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "-fKQEarOlHLrmPXLrncsX",
+                      "label": "new-tab",
+                      "position": {
+                        "x": 388,
+                        "y": 36
+                      },
+                      "selected": false,
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 972,
+                        "y": 36,
+                        "z": 0
+                      },
+                      "data": {
+                        "description": "Auswahl aufheben",
+                        "disableBlock": false,
+                        "findBy": "xpath",
+                        "markEl": false,
+                        "multiple": false,
+                        "selector": "/html/body/c-wiz/div/c-wiz/div/div[2]/div[2]/c-wiz/div/div/div/div/div[2]/c-wiz[1]/div/div[3]/div/div[1]/div[1]/div[2]/div[2]/div/button/span",
+                        "waitForSelector": true,
+                        "waitSelectorTimeout": 5000
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "V2Ouw0U07R2apA1P7e5ha-output-1",
+                            "position": "right",
+                            "x": 195.9965981826077,
+                            "y": 27.981855005946684,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "V2Ouw0U07R2apA1P7e5ha-input-1",
+                            "position": "left",
+                            "x": -19.995818870049927,
+                            "y": 27.981855005946684,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "V2Ouw0U07R2apA1P7e5ha",
+                      "label": "event-click",
+                      "position": {
+                        "x": 972,
+                        "y": 36
+                      },
+                      "selected": false,
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 1264,
+                        "y": 36,
+                        "z": 0
+                      },
+                      "data": {
+                        "description": "Alle auswählen",
+                        "disableBlock": false,
+                        "findBy": "xpath",
+                        "markEl": false,
+                        "multiple": false,
+                        "selector": "/html/body/c-wiz/div/c-wiz/div/div[2]/div[2]/c-wiz/div/div/div/div/div[2]/c-wiz[1]/div/div[3]/div/div[1]/div[1]/div[2]/div[1]/div/button/span",
+                        "waitForSelector": true,
+                        "waitSelectorTimeout": 5000
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "SPLNKwfGxvNV74tCsC0Vt-output-1",
+                            "position": "right",
+                            "x": 196.01722871140964,
+                            "y": 27.981855005946684,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "SPLNKwfGxvNV74tCsC0Vt-input-1",
+                            "position": "left",
+                            "x": -19.995743300347353,
+                            "y": 27.981855005946684,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "SPLNKwfGxvNV74tCsC0Vt",
+                      "label": "event-click",
+                      "position": {
+                        "x": 1264,
+                        "y": 36
+                      },
+                      "selected": false,
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 1556,
+                        "y": 36,
+                        "z": 0
+                      },
+                      "data": {
+                        "description": "",
+                        "disableBlock": false,
+                        "findBy": "cssSelector",
+                        "incX": false,
+                        "incY": false,
+                        "markEl": false,
+                        "multiple": false,
+                        "scrollIntoView": false,
+                        "scrollX": 0,
+                        "scrollY": 6498,
+                        "selector": "html",
+                        "smooth": true,
+                        "waitForSelector": false,
+                        "waitSelectorTimeout": 5000
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "k0OlbCu6dNsWF1dRZXKGN-output-1",
+                            "position": "right",
+                            "x": 195.99652261290512,
+                            "y": 27.981855005946684,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "k0OlbCu6dNsWF1dRZXKGN-input-1",
+                            "position": "left",
+                            "x": -19.995894439752497,
+                            "y": 27.981855005946684,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "k0OlbCu6dNsWF1dRZXKGN",
+                      "label": "element-scroll",
+                      "position": {
+                        "x": 1556,
+                        "y": 36
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 1848,
+                        "y": 36,
+                        "z": 0
+                      },
+                      "data": {
+                        "description": "Nächster Schritt",
+                        "disableBlock": false,
+                        "findBy": "xpath",
+                        "markEl": false,
+                        "multiple": false,
+                        "selector": "/html/body/c-wiz/div/c-wiz/div/div[2]/div[2]/c-wiz/div/div/div/div/div[2]/c-wiz[1]/div/div[3]/div/div[2]/div/div/button/span",
+                        "waitForSelector": true,
+                        "waitSelectorTimeout": 5000
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "I8f5p7oW8e03e-XWqDk1x-output-1",
+                            "position": "right",
+                            "x": 195.99667375231027,
+                            "y": 27.981855005946684,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "I8f5p7oW8e03e-XWqDk1x-input-1",
+                            "position": "left",
+                            "x": -19.995894439752497,
+                            "y": 27.981855005946684,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "I8f5p7oW8e03e-XWqDk1x",
+                      "label": "event-click",
+                      "position": {
+                        "x": 1848,
+                        "y": 36
+                      },
+                      "selected": false,
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 2140,
+                        "y": 36,
+                        "z": 0
+                      },
+                      "data": {
+                        "description": "",
+                        "disableBlock": false,
+                        "findBy": "cssSelector",
+                        "incX": false,
+                        "incY": false,
+                        "markEl": false,
+                        "multiple": false,
+                        "scrollIntoView": false,
+                        "scrollX": 0,
+                        "scrollY": 322,
+                        "selector": "html",
+                        "smooth": true,
+                        "waitForSelector": false,
+                        "waitSelectorTimeout": 5000
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "E4eOzzmpYkMgCeK_QAtv6-output-1",
+                            "position": "right",
+                            "x": 196.01722871140964,
+                            "y": 27.981855005946684,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "E4eOzzmpYkMgCeK_QAtv6-input-1",
+                            "position": "left",
+                            "x": -19.995894439752497,
+                            "y": 27.981855005946684,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "E4eOzzmpYkMgCeK_QAtv6",
+                      "label": "element-scroll",
+                      "position": {
+                        "x": 2140,
+                        "y": 36
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 2432,
+                        "y": 36,
+                        "z": 0
+                      },
+                      "data": {
+                        "description": "Export erstellen",
+                        "disableBlock": false,
+                        "findBy": "xpath",
+                        "markEl": true,
+                        "multiple": false,
+                        "selector": "/html/body/c-wiz/div/c-wiz/div/div[2]/div[2]/c-wiz/div/div/div/div/div[2]/c-wiz[2]/div/div[3]/div/div[2]/div/div/button/div[3]",
+                        "waitForSelector": true,
+                        "waitSelectorTimeout": 5000
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "H8QFA-V45rfPBhHncExl8-output-1",
+                            "position": "right",
+                            "x": 195.99667375231027,
+                            "y": 27.981855005946684,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "H8QFA-V45rfPBhHncExl8-input-1",
+                            "position": "left",
+                            "x": -19.995894439752497,
+                            "y": 27.981855005946684,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "H8QFA-V45rfPBhHncExl8",
+                      "label": "event-click",
+                      "position": {
+                        "x": 2432,
+                        "y": 36
+                      },
+                      "selected": false,
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 671.9917424280495,
+                        "y": -124.1651514390072,
+                        "z": 0
+                      },
+                      "data": {
+                        "code": "const event = (state) => new CustomEvent( '__js-event__', {\n  'detail': {\n    'type': 'to_active',\n    'data': { 'workflow_state': state }\n  }\n});\nif (window.location.href == \"https://takeout.google.com/\"){\n  window.dispatchEvent(event('started'));\n} else {\n  window.dispatchEvent(event('start-failed'));\n}",
+                        "context": "background",
+                        "description": "Send start signal",
+                        "disableBlock": false,
+                        "everyNewTab": false,
+                        "preloadScripts": [],
+                        "runBeforeLoad": false,
+                        "timeout": 20000
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "m9c2zjj-output-1",
+                            "position": "right",
+                            "x": 195.9965981826077,
+                            "y": 27.981855005946684,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "m9c2zjj-input-1",
+                            "position": "left",
+                            "x": -19.995894439752497,
+                            "y": 27.981855005946684,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "m9c2zjj",
+                      "label": "javascript-code",
+                      "position": {
+                        "x": 671.9917424280495,
+                        "y": -124.1651514390072
+                      },
+                      "selected": false,
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 2724,
+                        "y": 36,
+                        "z": 0
+                      },
+                      "data": {
+                        "code": "const event = new CustomEvent( '__js-event__', {\n  'detail': {\n    'type': 'to_active',\n    'data': { 'workflow_state': 'completed' }\n  }\n});\nwindow.dispatchEvent(event);",
+                        "description": "Send completed signal",
+                        "disableBlock": false,
+                        "everyNewTab": false,
+                        "preloadScripts": [],
+                        "runBeforeLoad": false,
+                        "timeout": 20000
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "kl9udb1-output-1",
+                            "position": "right",
+                            "x": 195.99667375231027,
+                            "y": 27.981855005946684,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "kl9udb1-input-1",
+                            "position": "left",
+                            "x": -19.995743300347353,
+                            "y": 27.981855005946684,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "kl9udb1",
+                      "label": "javascript-code",
+                      "position": {
+                        "x": 2724,
+                        "y": 36
+                      },
+                      "selected": false,
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 3016,
+                        "y": 36,
+                        "z": 0
+                      },
+                      "data": {
+                        "activeTab": true,
+                        "allWindows": false,
+                        "closeType": "tab",
+                        "description": "",
+                        "disableBlock": false,
+                        "url": ""
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "am9ocwk-output-1",
+                            "position": "right",
+                            "x": 196.01722871140964,
+                            "y": 27.981855005946684,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "am9ocwk-input-1",
+                            "position": "left",
+                            "x": -19.99604557915764,
+                            "y": 27.981855005946684,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "am9ocwk",
+                      "label": "close-tab",
+                      "position": {
+                        "x": 3016,
+                        "y": 36
+                      },
+                      "selected": false,
+                      "type": "BlockBasic"
+                    }
+                  ],
+                  "edges": [
+                    {
+                      "id": "vueflow__edge-w8mVgv2A0WjHWMafV8sCM-output-1--fKQEarOlHLrmPXLrncsX-input-1",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "w8mVgv2A0WjHWMafV8sCM",
+                      "sourceHandle": "w8mVgv2A0WjHWMafV8sCM-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "-fKQEarOlHLrmPXLrncsX",
+                      "targetHandle": "-fKQEarOlHLrmPXLrncsX-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "vueflow__edge-V2Ouw0U07R2apA1P7e5ha-output-1-SPLNKwfGxvNV74tCsC0Vt-input-1",
+                      "class": "source-V2Ouw0U07R2apA1P7e5ha-output-1 target-SPLNKwfGxvNV74tCsC0Vt-input-1",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "V2Ouw0U07R2apA1P7e5ha",
+                      "sourceHandle": "V2Ouw0U07R2apA1P7e5ha-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "SPLNKwfGxvNV74tCsC0Vt",
+                      "targetHandle": "SPLNKwfGxvNV74tCsC0Vt-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "vueflow__edge-SPLNKwfGxvNV74tCsC0Vt-output-1-k0OlbCu6dNsWF1dRZXKGN-input-1",
+                      "class": "source-SPLNKwfGxvNV74tCsC0Vt-output-1 target-k0OlbCu6dNsWF1dRZXKGN-input-1",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "SPLNKwfGxvNV74tCsC0Vt",
+                      "sourceHandle": "SPLNKwfGxvNV74tCsC0Vt-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "k0OlbCu6dNsWF1dRZXKGN",
+                      "targetHandle": "k0OlbCu6dNsWF1dRZXKGN-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "vueflow__edge-k0OlbCu6dNsWF1dRZXKGN-output-1-I8f5p7oW8e03e-XWqDk1x-input-1",
+                      "class": "source-k0OlbCu6dNsWF1dRZXKGN-output-1 target-I8f5p7oW8e03e-XWqDk1x-input-1",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "k0OlbCu6dNsWF1dRZXKGN",
+                      "sourceHandle": "k0OlbCu6dNsWF1dRZXKGN-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "I8f5p7oW8e03e-XWqDk1x",
+                      "targetHandle": "I8f5p7oW8e03e-XWqDk1x-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "vueflow__edge-I8f5p7oW8e03e-XWqDk1x-output-1-E4eOzzmpYkMgCeK_QAtv6-input-1",
+                      "class": "source-I8f5p7oW8e03e-XWqDk1x-output-1 target-E4eOzzmpYkMgCeK_QAtv6-input-1",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "I8f5p7oW8e03e-XWqDk1x",
+                      "sourceHandle": "I8f5p7oW8e03e-XWqDk1x-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "E4eOzzmpYkMgCeK_QAtv6",
+                      "targetHandle": "E4eOzzmpYkMgCeK_QAtv6-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "vueflow__edge-E4eOzzmpYkMgCeK_QAtv6-output-1-H8QFA-V45rfPBhHncExl8-input-1",
+                      "class": "source-E4eOzzmpYkMgCeK_QAtv6-output-1 target-H8QFA-V45rfPBhHncExl8-input-1",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "E4eOzzmpYkMgCeK_QAtv6",
+                      "sourceHandle": "E4eOzzmpYkMgCeK_QAtv6-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "H8QFA-V45rfPBhHncExl8",
+                      "targetHandle": "H8QFA-V45rfPBhHncExl8-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "vueflow__edge--fKQEarOlHLrmPXLrncsX-fKQEarOlHLrmPXLrncsX-output-1-m9c2zjjm9c2zjj-input-1",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "-fKQEarOlHLrmPXLrncsX",
+                      "sourceHandle": "-fKQEarOlHLrmPXLrncsX-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "m9c2zjj",
+                      "targetHandle": "m9c2zjj-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "vueflow__edge-H8QFA-V45rfPBhHncExl8H8QFA-V45rfPBhHncExl8-output-1-kl9udb1kl9udb1-input-1",
+                      "class": "source-H8QFA-V45rfPBhHncExl8-output-1 target-kl9udb1-input-1",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "H8QFA-V45rfPBhHncExl8",
+                      "sourceHandle": "H8QFA-V45rfPBhHncExl8-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "kl9udb1",
+                      "targetHandle": "kl9udb1-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "vueflow__edge-kl9udb1kl9udb1-output-1-am9ocwkam9ocwk-input-1",
+                      "class": "source-kl9udb1-output-1 target-am9ocwk-input-1",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "kl9udb1",
+                      "sourceHandle": "kl9udb1-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "am9ocwk",
+                      "targetHandle": "am9ocwk-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "vueflow__edge--fKQEarOlHLrmPXLrncsX-fKQEarOlHLrmPXLrncsX-output-1-V2Ouw0U07R2apA1P7e5haV2Ouw0U07R2apA1P7e5ha-input-1",
+                      "source": "-fKQEarOlHLrmPXLrncsX",
+                      "sourceHandle": "-fKQEarOlHLrmPXLrncsX-output-1",
+                      "target": "V2Ouw0U07R2apA1P7e5ha",
+                      "targetHandle": "V2Ouw0U07R2apA1P7e5ha-input-1",
+                      "class": "source--fKQEarOlHLrmPXLrncsX-output-1 target-V2Ouw0U07R2apA1P7e5ha-input-1",
+                      "updatable": true,
+                      "type": "custom",
+                      "selectable": true,
+                      "markerEnd": "arrowclosed",
+                      "z": 0,
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "targetX": 0,
+                      "targetY": 0
+                    }
+                  ],
+                  "position": [
+                    -85.17438730385163,
+                    500.530453651338
+                  ],
+                  "zoom": 0.49948443391860403
+                },
+                "extVersion": "1.18.1",
+                "globalData": "[{ \"key\": \"value\" }]",
+                "icon": "riGlobalLine",
+                "id": "HHT4_mtC6X01mQ8uzQi97",
+                "includedWorkflows": {},
+                "name": "Google",
+                "settings": {
+                  "blockDelay": 0,
+                  "debugMode": false,
+                  "defaultColumnName": "column",
+                  "executedBlockOnWeb": false,
+                  "inputAutocomplete": true,
+                  "insertDefaultColumn": false,
+                  "notification": true,
+                  "onError": "stop-workflow",
+                  "publicId": "",
+                  "restartTimes": 3,
+                  "reuseLastState": false,
+                  "saveLog": true
+                },
+                "table": [],
+                "trigger": {
+                  "activeInInput": false,
+                  "contextMenuName": "",
+                  "contextTypes": [],
+                  "date": "",
+                  "days": [],
+                  "delay": 5,
+                  "description": "",
+                  "disableBlock": false,
+                  "interval": 60,
+                  "isUrlRegex": false,
+                  "observeElement": {
+                    "baseElOptions": {
+                      "attributeFilter": [],
+                      "attributes": false,
+                      "characterData": false,
+                      "childList": true,
+                      "subtree": false
+                    },
+                    "baseSelector": "",
+                    "matchPattern": "",
+                    "selector": "",
+                    "targetOptions": {
+                      "attributeFilter": [],
+                      "attributes": false,
+                      "characterData": false,
+                      "childList": true,
+                      "subtree": false
+                    }
+                  },
+                  "shortcut": "",
+                  "time": "00:00",
+                  "type": "manual",
+                  "url": ""
+                },
+                "updatedAt": 1674517389951,
+                "version": "1.23.4.1"
+              }
+            ],
+            "version": 0,
+            "verified": true
+          }
+        }
+      },
+      {
+        "api": {
+          "available": false
+        }
+      }
+    ],
+    "requestParameter": {
+      "timeRange": {
+        "allTime": true,
+        "customRange": {
+          "available": false
+        }
+      },
+      "mediaQuality": [
+        "medium"
+      ],
+      "dataFormat": [
+        "CSV"
+      ]
+    },
+    "createdAt": "2023-02-15T11:34:36.124000Z",
+    "updatedAt": "2023-02-15T11:34:36.124000Z"
+  }

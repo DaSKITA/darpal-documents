@@ -1,0 +1,457 @@
+{
+    "meta": {
+      "name": "TikTok",
+      "version": 1,
+      "_hash": "a1173ee510a7a4158048ee0a33634421eed57e70f7611f4fdf02687efd63f018"
+    },
+    "requestInterface": [
+      {
+        "manual": {
+          "available": false
+        }
+      },
+      {
+        "webinterface": {
+          "available": true,
+          "startUrl": "https://www.tiktok.com/setting?lang=en",
+          "authentication": "password",
+          "workflowContainer": {
+            "automationEngine": "automa",
+            "workflow": [
+              {
+                "id": "q20_Gbw1KCFQNh6F8AR1F",
+                "name": "TikTok",
+                "icon": "riGlobalLine",
+                "drawflow": {
+                  "nodes": [
+                    {
+                      "type": "BlockBasic",
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "sdJsJmJtlofSAYZcoov6x-output-1",
+                            "position": "right",
+                            "x": 195.99999779921305,
+                            "y": 27.999996332021727,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "computedPosition": {
+                        "x": 50,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "position": {
+                        "x": 50,
+                        "y": 300
+                      },
+                      "id": "sdJsJmJtlofSAYZcoov6x",
+                      "label": "trigger",
+                      "data": {
+                        "disableBlock": false,
+                        "description": "",
+                        "type": "manual",
+                        "interval": 60,
+                        "delay": 5,
+                        "date": "",
+                        "time": "00:00",
+                        "url": "",
+                        "shortcut": "",
+                        "activeInInput": false,
+                        "isUrlRegex": false,
+                        "days": [],
+                        "contextMenuName": "",
+                        "contextTypes": [],
+                        "parameters": [],
+                        "observeElement": {
+                          "selector": "",
+                          "baseSelector": "",
+                          "matchPattern": "",
+                          "targetOptions": {
+                            "subtree": false,
+                            "childList": true,
+                            "attributes": false,
+                            "attributeFilter": [],
+                            "characterData": false
+                          },
+                          "baseElOptions": {
+                            "subtree": false,
+                            "childList": true,
+                            "attributes": false,
+                            "attributeFilter": [],
+                            "characterData": false
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "BlockBasic",
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "IwXCkBNsAce2Pa_Bnoh_U-output-1",
+                            "position": "right",
+                            "x": 195.99999779921305,
+                            "y": 27.999996332021727,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "IwXCkBNsAce2Pa_Bnoh_U-input-1",
+                            "position": "left",
+                            "x": -20.000000733595655,
+                            "y": 27.999996332021727,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "computedPosition": {
+                        "x": 320,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "id": "IwXCkBNsAce2Pa_Bnoh_U",
+                      "label": "new-tab",
+                      "data": {
+                        "disableBlock": false,
+                        "description": "",
+                        "url": "https://www.tiktok.com/setting?lang=en",
+                        "userAgent": "",
+                        "active": false,
+                        "inGroup": false,
+                        "waitTabLoaded": true,
+                        "updatePrevTab": false,
+                        "customUserAgent": false
+                      },
+                      "position": {
+                        "y": 300,
+                        "x": 320
+                      }
+                    },
+                    {
+                      "type": "BlockBasic",
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "AXsUmF7r32okp3zNGUCTB-output-1",
+                            "position": "right",
+                            "x": 196.00004474933496,
+                            "y": 27.999996332021727,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "AXsUmF7r32okp3zNGUCTB-input-1",
+                            "position": "left",
+                            "x": -20.000000733595655,
+                            "y": 27.999996332021727,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "computedPosition": {
+                        "x": 600,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "id": "AXsUmF7r32okp3zNGUCTB",
+                      "label": "javascript-code",
+                      "data": {
+                        "disableBlock": false,
+                        "description": "",
+                        "timeout": 20000,
+                        "context": "website",
+                        "code": "\n            const event = (state) => new CustomEvent( '__js-event__', {\n              'detail': {\n                'type': 'to_active',\n                'data': { 'workflow_state': state }\n              }\n            });\n            if (window.location.href == \"https://www.tiktok.com/setting?lang=en\"){\n              window.dispatchEvent(event('started'));\n            } else {\n              window.dispatchEvent(event('start-failed'));\n            }",
+                        "preloadScripts": [],
+                        "everyNewTab": false,
+                        "runBeforeLoad": false
+                      },
+                      "position": {
+                        "y": 300,
+                        "x": 600
+                      }
+                    },
+                    {
+                      "type": "BlockBasic",
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "mMieQfU5FpwZvxivxtf2F-output-1",
+                            "position": "right",
+                            "x": 196.00004474933496,
+                            "y": 27.999996332021727,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "mMieQfU5FpwZvxivxtf2F-input-1",
+                            "position": "left",
+                            "x": -20.000000733595655,
+                            "y": 27.999996332021727,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "computedPosition": {
+                        "x": 880,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "id": "mMieQfU5FpwZvxivxtf2F",
+                      "label": "javascript-code",
+                      "data": {
+                        "disableBlock": false,
+                        "description": "",
+                        "timeout": 20000,
+                        "context": "website",
+                        "code": "const event = new CustomEvent( '__js-event__', {\n  'detail': {\n    'type': 'to_active',\n    'data': { 'workflow_state': 'completed' }\n  }\n});\nwindow.dispatchEvent(event);",
+                        "preloadScripts": [],
+                        "everyNewTab": false,
+                        "runBeforeLoad": false
+                      },
+                      "position": {
+                        "y": 300,
+                        "x": 880
+                      }
+                    },
+                    {
+                      "type": "BlockBasic",
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "javFx6b6Eju9b5J-G2kWN-output-1",
+                            "position": "right",
+                            "x": 196.00004474933496,
+                            "y": 27.999996332021727,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "javFx6b6Eju9b5J-G2kWN-input-1",
+                            "position": "left",
+                            "x": -20.000000733595655,
+                            "y": 27.999996332021727,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "computedPosition": {
+                        "x": 1160,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "id": "javFx6b6Eju9b5J-G2kWN",
+                      "label": "close-tab",
+                      "data": {
+                        "disableBlock": false,
+                        "url": "",
+                        "description": "",
+                        "activeTab": true,
+                        "closeType": "tab",
+                        "allWindows": false
+                      },
+                      "position": {
+                        "y": 300,
+                        "x": 1160
+                      }
+                    }
+                  ],
+                  "edges": [
+                    {
+                      "id": "uML7ZQirCIFP1vVjwvWdZ",
+                      "source": "sdJsJmJtlofSAYZcoov6x",
+                      "target": "IwXCkBNsAce2Pa_Bnoh_U",
+                      "targetHandle": "IwXCkBNsAce2Pa_Bnoh_U-input-1",
+                      "sourceHandle": "sdJsJmJtlofSAYZcoov6x-output-1",
+                      "class": "source-sdJsJmJtlofSAYZcoov6x-output-1 targte-IwXCkBNsAce2Pa_Bnoh_U-input-1",
+                      "type": "custom",
+                      "z": 0,
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "targetX": 0,
+                      "targetY": 0,
+                      "updatable": true,
+                      "selectable": true,
+                      "markerEnd": "arrowclosed"
+                    },
+                    {
+                      "id": "fSR1kl2MZnZCq0Z5yHysm",
+                      "target": "AXsUmF7r32okp3zNGUCTB",
+                      "source": "IwXCkBNsAce2Pa_Bnoh_U",
+                      "targetHandle": "AXsUmF7r32okp3zNGUCTB-input-1",
+                      "sourceHandle": "IwXCkBNsAce2Pa_Bnoh_U-output-1",
+                      "class": "source-IwXCkBNsAce2Pa_Bnoh_U-output-1 targte-AXsUmF7r32okp3zNGUCTB-input-1",
+                      "type": "custom",
+                      "z": 0,
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "targetX": 0,
+                      "targetY": 0,
+                      "updatable": true,
+                      "selectable": true,
+                      "markerEnd": "arrowclosed"
+                    },
+                    {
+                      "id": "8ujJsnm1F-vNPZECR5bNT",
+                      "target": "mMieQfU5FpwZvxivxtf2F",
+                      "source": "AXsUmF7r32okp3zNGUCTB",
+                      "targetHandle": "mMieQfU5FpwZvxivxtf2F-input-1",
+                      "sourceHandle": "AXsUmF7r32okp3zNGUCTB-output-1",
+                      "class": "source-AXsUmF7r32okp3zNGUCTB-output-1 targte-mMieQfU5FpwZvxivxtf2F-input-1",
+                      "type": "custom",
+                      "z": 0,
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "targetX": 0,
+                      "targetY": 0,
+                      "updatable": true,
+                      "selectable": true,
+                      "markerEnd": "arrowclosed"
+                    },
+                    {
+                      "id": "aXZA31jEFxx0ZdgVDShWi",
+                      "target": "javFx6b6Eju9b5J-G2kWN",
+                      "source": "mMieQfU5FpwZvxivxtf2F",
+                      "targetHandle": "javFx6b6Eju9b5J-G2kWN-input-1",
+                      "sourceHandle": "mMieQfU5FpwZvxivxtf2F-output-1",
+                      "class": "source-mMieQfU5FpwZvxivxtf2F-output-1 targte-javFx6b6Eju9b5J-G2kWN-input-1",
+                      "type": "custom",
+                      "z": 0,
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "targetX": 0,
+                      "targetY": 0,
+                      "updatable": true,
+                      "selectable": true,
+                      "markerEnd": "arrowclosed"
+                    }
+                  ],
+                  "position": [
+                    67.06663446162588,
+                    -3.2054562566797813
+                  ],
+                  "zoom": 1.3
+                },
+                "table": [],
+                "dataColumns": [],
+                "description": "",
+                "trigger": {
+                  "disableBlock": false,
+                  "description": "",
+                  "type": "manual",
+                  "interval": 60,
+                  "delay": 5,
+                  "date": "",
+                  "time": "00:00",
+                  "url": "",
+                  "shortcut": "",
+                  "activeInInput": false,
+                  "isUrlRegex": false,
+                  "days": [],
+                  "contextMenuName": "",
+                  "contextTypes": [],
+                  "parameters": [],
+                  "observeElement": {
+                    "selector": "",
+                    "baseSelector": "",
+                    "matchPattern": "",
+                    "targetOptions": {
+                      "subtree": false,
+                      "childList": true,
+                      "attributes": false,
+                      "attributeFilter": [],
+                      "characterData": false
+                    },
+                    "baseElOptions": {
+                      "subtree": false,
+                      "childList": true,
+                      "attributes": false,
+                      "attributeFilter": [],
+                      "characterData": false
+                    }
+                  }
+                },
+                "createdAt": 1674211586084,
+                "updatedAt": 1674211638217,
+                "isDisabled": false,
+                "settings": {
+                  "publicId": "",
+                  "blockDelay": 0,
+                  "saveLog": true,
+                  "debugMode": false,
+                  "restartTimes": 3,
+                  "notification": true,
+                  "execContext": "popup",
+                  "reuseLastState": false,
+                  "inputAutocomplete": true,
+                  "onError": "stop-workflow",
+                  "executedBlockOnWeb": false,
+                  "insertDefaultColumn": false,
+                  "defaultColumnName": "column"
+                },
+                "version": "1.23.4.1",
+                "globalData": "{\n\t\"key\": \"value\"\n}"
+              }
+            ],
+            "version": 0,
+            "verified": true
+          }
+        }
+      },
+      {
+        "api": {
+          "available": false
+        }
+      }
+    ],
+    "requestParameter": {
+      "timeRange": {
+        "allTime": true,
+        "customRange": {
+          "available": false
+        }
+      },
+      "mediaQuality": [
+        "medium"
+      ],
+      "dataFormat": [
+        "CSV"
+      ]
+    },
+    "createdAt": "2023-02-15T11:34:36.159000Z",
+    "updatedAt": "2023-02-15T11:34:36.159000Z"
+  }

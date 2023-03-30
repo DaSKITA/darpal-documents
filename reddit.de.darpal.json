@@ -1,0 +1,317 @@
+{
+    "meta": {
+      "name": "Reddit",
+      "version": 1,
+      "_hash": "1e965cf0e12ba6176494f52c089031b0e7a05f4aed24af1dfc24befd039c511d"
+    },
+    "requestInterface": [
+      {
+        "manual": {
+          "available": false
+        }
+      },
+      {
+        "webinterface": {
+          "available": true,
+          "startUrl": "https://www.reddit.com/settings/data-request",
+          "authentication": "password",
+          "workflowContainer": {
+            "automationEngine": "automa",
+            "workflow": [
+              {
+                "createdAt": 1674091247446,
+                "dataColumns": [],
+                "description": "",
+                "drawflow": {
+                  "edges": [
+                    {
+                      "class": "source-PTCUCT2QwNg3ZwWPTTZDM-output-1 targte-U-naobuQeEqHZ6sg--cZH-input-1",
+                      "id": "3b1WvhFCFlMWfCU5GXJan",
+                      "source": "PTCUCT2QwNg3ZwWPTTZDM",
+                      "sourceHandle": "PTCUCT2QwNg3ZwWPTTZDM-output-1",
+                      "target": "U-naobuQeEqHZ6sg--cZH",
+                      "targetHandle": "U-naobuQeEqHZ6sg--cZH-input-1"
+                    },
+                    {
+                      "class": "source-U-naobuQeEqHZ6sg--cZH-output-1 targte-1CKaXvUydyWch-51RpfxH-input-1",
+                      "id": "ov65ONTVHS4eByhGYyJNI",
+                      "source": "U-naobuQeEqHZ6sg--cZH",
+                      "sourceHandle": "U-naobuQeEqHZ6sg--cZH-output-1",
+                      "target": "1CKaXvUydyWch-51RpfxH",
+                      "targetHandle": "1CKaXvUydyWch-51RpfxH-input-1"
+                    },
+                    {
+                      "class": "source-1CKaXvUydyWch-51RpfxH-output-1 targte-jEihZxqcPqzr0zuHp3Q7H-input-1",
+                      "id": "xZ0Wj876jc_Wq_OBmU5Wv",
+                      "source": "1CKaXvUydyWch-51RpfxH",
+                      "sourceHandle": "1CKaXvUydyWch-51RpfxH-output-1",
+                      "target": "jEihZxqcPqzr0zuHp3Q7H",
+                      "targetHandle": "jEihZxqcPqzr0zuHp3Q7H-input-1"
+                    },
+                    {
+                      "class": "source-jEihZxqcPqzr0zuHp3Q7H-output-1 targte-SJP4wcJH6x3Nm7gcidA3R-input-1",
+                      "id": "nxaIxo6aFcSIFABe1ZPU8",
+                      "source": "jEihZxqcPqzr0zuHp3Q7H",
+                      "sourceHandle": "jEihZxqcPqzr0zuHp3Q7H-output-1",
+                      "target": "SJP4wcJH6x3Nm7gcidA3R",
+                      "targetHandle": "SJP4wcJH6x3Nm7gcidA3R-input-1"
+                    },
+                    {
+                      "class": "source-SJP4wcJH6x3Nm7gcidA3R-output-1 targte-9dntWY3xHPNVn9A7TpyE3-input-1",
+                      "id": "gmTRRDee3brm9nLds0pmW",
+                      "source": "SJP4wcJH6x3Nm7gcidA3R",
+                      "sourceHandle": "SJP4wcJH6x3Nm7gcidA3R-output-1",
+                      "target": "9dntWY3xHPNVn9A7TpyE3",
+                      "targetHandle": "9dntWY3xHPNVn9A7TpyE3-input-1"
+                    },
+                    {
+                      "class": "source-9dntWY3xHPNVn9A7TpyE3-output-1 targte-F8z2F7LmfNSKUrNrKVZlr-input-1",
+                      "id": "ojWknFtliHjF2U-yk0Cc7",
+                      "source": "9dntWY3xHPNVn9A7TpyE3",
+                      "sourceHandle": "9dntWY3xHPNVn9A7TpyE3-output-1",
+                      "target": "F8z2F7LmfNSKUrNrKVZlr",
+                      "targetHandle": "F8z2F7LmfNSKUrNrKVZlr-input-1"
+                    },
+                    {
+                      "class": "source-F8z2F7LmfNSKUrNrKVZlr-output-1 targte-kEpI6Im-MNHzb5lHfn014-input-1",
+                      "id": "LD1oO_yTY09dUaqaWehaC",
+                      "source": "F8z2F7LmfNSKUrNrKVZlr",
+                      "sourceHandle": "F8z2F7LmfNSKUrNrKVZlr-output-1",
+                      "target": "kEpI6Im-MNHzb5lHfn014",
+                      "targetHandle": "kEpI6Im-MNHzb5lHfn014-input-1"
+                    }
+                  ],
+                  "nodes": [
+                    {
+                      "data": {
+                        "activeInInput": false,
+                        "contextMenuName": "",
+                        "contextTypes": [],
+                        "date": "",
+                        "days": [],
+                        "delay": 5,
+                        "description": "",
+                        "disableBlock": false,
+                        "interval": 60,
+                        "isUrlRegex": false,
+                        "observeElement": {
+                          "baseElOptions": {
+                            "attributeFilter": [],
+                            "attributes": false,
+                            "characterData": false,
+                            "childList": true,
+                            "subtree": false
+                          },
+                          "baseSelector": "",
+                          "matchPattern": "",
+                          "selector": "",
+                          "targetOptions": {
+                            "attributeFilter": [],
+                            "attributes": false,
+                            "characterData": false,
+                            "childList": true,
+                            "subtree": false
+                          }
+                        },
+                        "parameters": [],
+                        "shortcut": "",
+                        "time": "00:00",
+                        "type": "manual",
+                        "url": ""
+                      },
+                      "id": "PTCUCT2QwNg3ZwWPTTZDM",
+                      "label": "trigger",
+                      "position": {
+                        "x": 50,
+                        "y": 300
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "data": {
+                        "active": false,
+                        "customUserAgent": false,
+                        "description": "",
+                        "disableBlock": false,
+                        "inGroup": false,
+                        "updatePrevTab": false,
+                        "url": "https://www.reddit.com/settings/data-request",
+                        "userAgent": "",
+                        "waitTabLoaded": true
+                      },
+                      "id": "U-naobuQeEqHZ6sg--cZH",
+                      "label": "new-tab",
+                      "position": {
+                        "x": 320,
+                        "y": 300
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "data": {
+                        "code": "\n            const event = (state) => new CustomEvent( '__js-event__', {\n              'detail': {\n                'type': 'to_active',\n                'data': { 'workflow_state': state }\n              }\n            });\n            if (window.location.href == \"https://www.reddit.com/settings/data-request\"){\n              window.dispatchEvent(event('started'));\n            } else {\n              window.dispatchEvent(event('start-failed'));\n            }",
+                        "context": "website",
+                        "description": "",
+                        "disableBlock": false,
+                        "everyNewTab": false,
+                        "preloadScripts": [],
+                        "runBeforeLoad": false,
+                        "timeout": 20000
+                      },
+                      "id": "1CKaXvUydyWch-51RpfxH",
+                      "label": "javascript-code",
+                      "position": {
+                        "x": 600,
+                        "y": 300
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "data": {
+                        "description": "",
+                        "disableBlock": false,
+                        "findBy": "xpath",
+                        "markEl": false,
+                        "multiple": false,
+                        "selector": "//BODY/DIV[1]/DIV[1]/DIV[2]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/FORM[1]/FIELDSET[2]/DIV[1]/DIV[1]/svg[1]",
+                        "waitForSelector": true,
+                        "waitSelectorTimeout": 5000
+                      },
+                      "id": "jEihZxqcPqzr0zuHp3Q7H",
+                      "label": "event-click",
+                      "position": {
+                        "x": 880,
+                        "y": 300
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "data": {
+                        "description": "",
+                        "disableBlock": false,
+                        "findBy": "xpath",
+                        "markEl": false,
+                        "multiple": false,
+                        "selector": "//BODY/DIV[1]/DIV[1]/DIV[2]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/FORM[1]/FIELDSET[3]/DIV[1]/DIV[2]/svg[1]",
+                        "waitForSelector": true,
+                        "waitSelectorTimeout": 5000
+                      },
+                      "id": "SJP4wcJH6x3Nm7gcidA3R",
+                      "label": "event-click",
+                      "position": {
+                        "x": 1160,
+                        "y": 300
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "data": {
+                        "description": "Abschicken",
+                        "disableBlock": false,
+                        "findBy": "xpath",
+                        "markEl": false,
+                        "multiple": false,
+                        "selector": "//BODY/DIV[1]/DIV[1]/DIV[2]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/FORM[1]/FIELDSET[4]/BUTTON[1]",
+                        "waitForSelector": true,
+                        "waitSelectorTimeout": 5000
+                      },
+                      "id": "9dntWY3xHPNVn9A7TpyE3",
+                      "label": "event-click",
+                      "position": {
+                        "x": 1440,
+                        "y": 300
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "data": {
+                        "code": "const event = new CustomEvent( '__js-event__', {\n  'detail': {\n    'type': 'to_active',\n    'data': { 'workflow_state': 'completed' }\n  }\n});\nwindow.dispatchEvent(event);",
+                        "context": "website",
+                        "description": "",
+                        "disableBlock": false,
+                        "everyNewTab": false,
+                        "preloadScripts": [],
+                        "runBeforeLoad": false,
+                        "timeout": 20000
+                      },
+                      "id": "F8z2F7LmfNSKUrNrKVZlr",
+                      "label": "javascript-code",
+                      "position": {
+                        "x": 50,
+                        "y": 450
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "data": {
+                        "activeTab": true,
+                        "allWindows": false,
+                        "closeType": "tab",
+                        "description": "",
+                        "disableBlock": false,
+                        "url": ""
+                      },
+                      "id": "kEpI6Im-MNHzb5lHfn014",
+                      "label": "close-tab",
+                      "position": {
+                        "x": 330,
+                        "y": 450
+                      },
+                      "type": "BlockBasic"
+                    }
+                  ],
+                  "zoom": 1.3
+                },
+                "globalData": "{\n\t\"key\": \"value\"\n}",
+                "icon": "riGlobalLine",
+                "id": "aI9ZcvNisfN1Y_BuHLXE8",
+                "isDisabled": false,
+                "name": "Reddit",
+                "settings": {
+                  "blockDelay": 0,
+                  "debugMode": false,
+                  "defaultColumnName": "column",
+                  "execContext": "popup",
+                  "executedBlockOnWeb": false,
+                  "inputAutocomplete": true,
+                  "insertDefaultColumn": false,
+                  "notification": true,
+                  "onError": "stop-workflow",
+                  "publicId": "",
+                  "restartTimes": 3,
+                  "reuseLastState": false,
+                  "saveLog": true
+                },
+                "table": [],
+                "updatedAt": 1674091265186,
+                "version": "1.23.5"
+              }
+            ],
+            "version": 0,
+            "verified": true
+          }
+        }
+      },
+      {
+        "api": {
+          "available": false
+        }
+      }
+    ],
+    "requestParameter": {
+      "timeRange": {
+        "allTime": true,
+        "customRange": {
+          "available": false
+        }
+      },
+      "mediaQuality": [
+        "medium"
+      ],
+      "dataFormat": [
+        "CSV"
+      ]
+    },
+    "createdAt": "2023-02-15T11:34:36.136000Z",
+    "updatedAt": "2023-02-15T11:34:36.136000Z"
+  }

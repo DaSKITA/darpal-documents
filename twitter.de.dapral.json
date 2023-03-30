@@ -1,0 +1,523 @@
+{
+    "meta": {
+      "name": "Twitter",
+      "version": 1,
+      "_hash": "e4c9a8d2bac77e56bde1e3b5cc72ee32d9d34ff4e05c21a50d210a3238e01629"
+    },
+    "requestInterface": [
+      {
+        "manual": {
+          "available": false
+        }
+      },
+      {
+        "webinterface": {
+          "available": true,
+          "startUrl": "https://twitter.com/settings/download_your_data",
+          "authentication": "password",
+          "workflowContainer": {
+            "automationEngine": "automa",
+            "workflow": [
+              {
+                "drawflow": {
+                  "nodes": [
+                    {
+                      "computedPosition": {
+                        "x": 50,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "data": {
+                        "activeInInput": false,
+                        "contextMenuName": "",
+                        "contextTypes": [],
+                        "date": "",
+                        "days": [],
+                        "delay": 5,
+                        "description": "",
+                        "disableBlock": false,
+                        "interval": 60,
+                        "isUrlRegex": false,
+                        "observeElement": {
+                          "baseElOptions": {
+                            "attributeFilter": [],
+                            "attributes": false,
+                            "characterData": false,
+                            "childList": true,
+                            "subtree": false
+                          },
+                          "baseSelector": "",
+                          "matchPattern": "",
+                          "selector": "",
+                          "targetOptions": {
+                            "attributeFilter": [],
+                            "attributes": false,
+                            "characterData": false,
+                            "childList": true,
+                            "subtree": false
+                          }
+                        },
+                        "parameters": [],
+                        "shortcut": "",
+                        "time": "00:00",
+                        "type": "manual",
+                        "url": ""
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "K3ndibR3Jm0nFb5wQ2aHO-output-1",
+                            "position": "right",
+                            "x": 195.98338852742333,
+                            "y": 27.986104147390638,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "K3ndibR3Jm0nFb5wQ2aHO",
+                      "label": "trigger",
+                      "position": {
+                        "x": 50,
+                        "y": 300
+                      },
+                      "selected": false,
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 320,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "data": {
+                        "active": false,
+                        "customUserAgent": false,
+                        "description": "",
+                        "disableBlock": false,
+                        "inGroup": false,
+                        "updatePrevTab": false,
+                        "url": "https://twitter.com/settings/download_your_data",
+                        "userAgent": "",
+                        "waitTabLoaded": true
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "kAif8PcjLSm3kss6w_Uhy-output-1",
+                            "position": "right",
+                            "x": 195.98348641516083,
+                            "y": 27.986104147390638,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "kAif8PcjLSm3kss6w_Uhy-input-1",
+                            "position": "left",
+                            "x": -19.993961932567775,
+                            "y": 27.986104147390638,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "kAif8PcjLSm3kss6w_Uhy",
+                      "label": "new-tab",
+                      "position": {
+                        "x": 320,
+                        "y": 300
+                      },
+                      "selected": false,
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 616.0379347821709,
+                        "y": 188.56901923378865,
+                        "z": 1000
+                      },
+                      "data": {
+                        "code": "const event = (state) => new CustomEvent( '__js-event__', {\n  'detail': {\n    'type': 'to_active',\n    'data': { 'workflow_state': state }\n  }\n});\nfunction testStart(){\n            if (window.location.href == \"https://twitter.com/settings/download_your_data\"){\n              window.dispatchEvent(event('started'));\n            } else {\n              window.dispatchEvent(event('start-failed'));\n            }\n}\n\nsetTimeout(testStart, 800)",
+                        "context": "website",
+                        "description": "",
+                        "disableBlock": false,
+                        "everyNewTab": false,
+                        "preloadScripts": [],
+                        "runBeforeLoad": false,
+                        "timeout": 20000
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "lnxX2JZ_OdInubBnwiWWv-output-1",
+                            "position": "right",
+                            "x": 196.01011187975715,
+                            "y": 27.986202035128123,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "lnxX2JZ_OdInubBnwiWWv-input-1",
+                            "position": "left",
+                            "x": -19.993961932567775,
+                            "y": 27.986202035128123,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "lnxX2JZ_OdInubBnwiWWv",
+                      "label": "javascript-code",
+                      "position": {
+                        "x": 616.0379347821709,
+                        "y": 188.56901923378865
+                      },
+                      "selected": true,
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 880,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "data": {
+                        "description": "Archiv anfordern",
+                        "disableBlock": false,
+                        "findBy": "xpath",
+                        "markEl": false,
+                        "multiple": false,
+                        "selector": "//BODY/DIV[1]/DIV[1]/DIV[1]/DIV[2]/MAIN[1]/DIV[1]/DIV[1]/DIV[1]/SECTION[2]/DIV[2]/DIV[2]/DIV[3]/DIV[2]/DIV[1]/DIV[1]/SPAN[1]/SPAN[1]",
+                        "waitForSelector": true,
+                        "waitSelectorTimeout": 5000
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "pewi-NkMtpEUSxQgo1gII-output-1",
+                            "position": "right",
+                            "x": 196.01020976749464,
+                            "y": 27.986104147390638,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "pewi-NkMtpEUSxQgo1gII-input-1",
+                            "position": "left",
+                            "x": -19.993961932567775,
+                            "y": 27.986104147390638,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "pewi-NkMtpEUSxQgo1gII",
+                      "label": "event-click",
+                      "position": {
+                        "x": 880,
+                        "y": 300
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 1160,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "data": {
+                        "code": "const event = new CustomEvent( '__js-event__', {\n  'detail': {\n    'type': 'to_active',\n    'data': { 'workflow_state': 'completed' }\n  }\n});\nwindow.dispatchEvent(event);",
+                        "context": "website",
+                        "description": "",
+                        "disableBlock": false,
+                        "everyNewTab": false,
+                        "preloadScripts": [],
+                        "runBeforeLoad": false,
+                        "timeout": 20000
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "VOrG9MbDA4EFq9L0dbgwQ-output-1",
+                            "position": "right",
+                            "x": 196.01020976749464,
+                            "y": 27.986104147390638,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "VOrG9MbDA4EFq9L0dbgwQ-input-1",
+                            "position": "left",
+                            "x": -19.993961932567775,
+                            "y": 27.986104147390638,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "VOrG9MbDA4EFq9L0dbgwQ",
+                      "label": "javascript-code",
+                      "position": {
+                        "x": 1160,
+                        "y": 300
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 1440,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "data": {
+                        "activeTab": true,
+                        "allWindows": false,
+                        "closeType": "tab",
+                        "description": "",
+                        "disableBlock": false,
+                        "url": ""
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "WlKeiVRId8OtYr67rRv76-output-1",
+                            "position": "right",
+                            "x": 196.01001399201965,
+                            "y": 27.986104147390638,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "WlKeiVRId8OtYr67rRv76-input-1",
+                            "position": "left",
+                            "x": -19.993961932567775,
+                            "y": 27.986104147390638,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "WlKeiVRId8OtYr67rRv76",
+                      "label": "close-tab",
+                      "position": {
+                        "x": 1440,
+                        "y": 300
+                      },
+                      "type": "BlockBasic"
+                    }
+                  ],
+                  "edges": [
+                    {
+                      "id": "-q8SB7NdHbmLvePEPqly_",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "K3ndibR3Jm0nFb5wQ2aHO",
+                      "sourceHandle": "K3ndibR3Jm0nFb5wQ2aHO-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "kAif8PcjLSm3kss6w_Uhy",
+                      "targetHandle": "kAif8PcjLSm3kss6w_Uhy-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "t20L7QUut_l4cVMKWjKdj",
+                      "class": "connected-edges",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "kAif8PcjLSm3kss6w_Uhy",
+                      "sourceHandle": "kAif8PcjLSm3kss6w_Uhy-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "lnxX2JZ_OdInubBnwiWWv",
+                      "targetHandle": "lnxX2JZ_OdInubBnwiWWv-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "Y6Kv4Q3Me7OQggZt_UCv_",
+                      "class": "source-pewi-NkMtpEUSxQgo1gII-output-1 targte-VOrG9MbDA4EFq9L0dbgwQ-input-1",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "pewi-NkMtpEUSxQgo1gII",
+                      "sourceHandle": "pewi-NkMtpEUSxQgo1gII-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "VOrG9MbDA4EFq9L0dbgwQ",
+                      "targetHandle": "VOrG9MbDA4EFq9L0dbgwQ-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "kPV8dwlfAJbBzxwFEtfPW",
+                      "class": "source-VOrG9MbDA4EFq9L0dbgwQ-output-1 targte-WlKeiVRId8OtYr67rRv76-input-1",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "VOrG9MbDA4EFq9L0dbgwQ",
+                      "sourceHandle": "VOrG9MbDA4EFq9L0dbgwQ-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "WlKeiVRId8OtYr67rRv76",
+                      "targetHandle": "WlKeiVRId8OtYr67rRv76-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "vueflow__edge-kAif8PcjLSm3kss6w_UhykAif8PcjLSm3kss6w_Uhy-output-1-pewi-NkMtpEUSxQgo1gIIpewi-NkMtpEUSxQgo1gII-input-1",
+                      "source": "kAif8PcjLSm3kss6w_Uhy",
+                      "sourceHandle": "kAif8PcjLSm3kss6w_Uhy-output-1",
+                      "target": "pewi-NkMtpEUSxQgo1gII",
+                      "targetHandle": "pewi-NkMtpEUSxQgo1gII-input-1",
+                      "class": "source-kAif8PcjLSm3kss6w_Uhy-output-1 target-pewi-NkMtpEUSxQgo1gII-input-1",
+                      "updatable": true,
+                      "type": "custom",
+                      "selectable": true,
+                      "markerEnd": "arrowclosed",
+                      "z": 0,
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "targetX": 0,
+                      "targetY": 0
+                    }
+                  ],
+                  "position": [
+                    83,
+                    139
+                  ],
+                  "zoom": 0.6235216775614218
+                },
+                "globalData": "{\n\t\"key\": \"value\"\n}",
+                "icon": "riGlobalLine",
+                "id": "xfkHr1D0Swf4YmFVwWymQ",
+                "isDisabled": false,
+                "name": "Twitter",
+                "settings": {
+                  "blockDelay": 0,
+                  "debugMode": false,
+                  "defaultColumnName": "column",
+                  "execContext": "popup",
+                  "executedBlockOnWeb": false,
+                  "inputAutocomplete": true,
+                  "insertDefaultColumn": false,
+                  "notification": true,
+                  "onError": "stop-workflow",
+                  "publicId": "",
+                  "restartTimes": 3,
+                  "reuseLastState": false,
+                  "saveLog": true
+                },
+                "table": [],
+                "trigger": {
+                  "activeInInput": false,
+                  "contextMenuName": "",
+                  "contextTypes": [],
+                  "date": "",
+                  "days": [],
+                  "delay": 5,
+                  "description": "",
+                  "disableBlock": false,
+                  "interval": 60,
+                  "isUrlRegex": false,
+                  "observeElement": {
+                    "baseElOptions": {
+                      "attributeFilter": [],
+                      "attributes": false,
+                      "characterData": false,
+                      "childList": true,
+                      "subtree": false
+                    },
+                    "baseSelector": "",
+                    "matchPattern": "",
+                    "selector": "",
+                    "targetOptions": {
+                      "attributeFilter": [],
+                      "attributes": false,
+                      "characterData": false,
+                      "childList": true,
+                      "subtree": false
+                    }
+                  },
+                  "parameters": [],
+                  "shortcut": "",
+                  "time": "00:00",
+                  "type": "manual",
+                  "url": ""
+                },
+                "updatedAt": 1674515544712,
+                "version": "1.23.4.1"
+              }
+            ],
+            "version": 0,
+            "verified": true
+          }
+        }
+      },
+      {
+        "api": {
+          "available": false
+        }
+      }
+    ],
+    "requestParameter": {
+      "timeRange": {
+        "allTime": true,
+        "customRange": {
+          "available": false
+        }
+      },
+      "mediaQuality": [
+        "medium"
+      ],
+      "dataFormat": [
+        "CSV"
+      ]
+    },
+    "createdAt": "2023-02-15T11:34:36.117000Z",
+    "updatedAt": "2023-02-15T11:34:36.117000Z"
+  }

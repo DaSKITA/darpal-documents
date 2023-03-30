@@ -1,0 +1,956 @@
+{
+    "meta": {
+      "name": "Samsung",
+      "version": 1,
+      "_hash": "c6807685e2814772259f2e50c66e8b1e5622801c6e6c55d45bc1a626f528ab21"
+    },
+    "requestInterface": [
+      {
+        "manual": {
+          "available": false
+        }
+      },
+      {
+        "webinterface": {
+          "available": true,
+          "startUrl": "https://privacy.samsung.com/my-data",
+          "authentication": "password",
+          "workflowContainer": {
+            "automationEngine": "automa",
+            "workflow": [
+              {
+                "createdAt": 1674143656992,
+                "dataColumns": [],
+                "description": "",
+                "drawflow": {
+                  "nodes": [
+                    {
+                      "computedPosition": {
+                        "x": 50,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "data": {
+                        "activeInInput": false,
+                        "contextMenuName": "",
+                        "contextTypes": [],
+                        "date": "",
+                        "days": [],
+                        "delay": 5,
+                        "description": "",
+                        "disableBlock": false,
+                        "interval": 60,
+                        "isUrlRegex": false,
+                        "observeElement": {
+                          "baseElOptions": {
+                            "attributeFilter": [],
+                            "attributes": false,
+                            "characterData": false,
+                            "childList": true,
+                            "subtree": false
+                          },
+                          "baseSelector": "",
+                          "matchPattern": "",
+                          "selector": "",
+                          "targetOptions": {
+                            "attributeFilter": [],
+                            "attributes": false,
+                            "characterData": false,
+                            "childList": true,
+                            "subtree": false
+                          }
+                        },
+                        "parameters": [],
+                        "shortcut": "",
+                        "time": "00:00",
+                        "type": "manual",
+                        "url": ""
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "O9c23I6ypOqUEyPTLxOcx-output-1",
+                            "position": "right",
+                            "x": 195.98560618493326,
+                            "y": 28.010571419121376,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "O9c23I6ypOqUEyPTLxOcx",
+                      "label": "trigger",
+                      "position": {
+                        "x": 50,
+                        "y": 300
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 320,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "data": {
+                        "active": false,
+                        "customUserAgent": false,
+                        "description": "",
+                        "disableBlock": false,
+                        "inGroup": false,
+                        "updatePrevTab": false,
+                        "url": "https://privacy.samsung.com/my-data",
+                        "userAgent": "",
+                        "waitTabLoaded": true
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "FC_xDLVjHs9LvU82gXFTX-output-1",
+                            "position": "right",
+                            "x": 196.01505279073456,
+                            "y": 28.010571419121376,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "FC_xDLVjHs9LvU82gXFTX-input-1",
+                            "position": "left",
+                            "x": -19.999099175206,
+                            "y": 28.010571419121376,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "FC_xDLVjHs9LvU82gXFTX",
+                      "label": "new-tab",
+                      "position": {
+                        "x": 320,
+                        "y": 300
+                      },
+                      "selected": false,
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 601.7672282384569,
+                        "y": 183.36293626183948,
+                        "z": 1000
+                      },
+                      "data": {
+                        "code": "\n            const event = (state) => new CustomEvent( '__js-event__', {\n              'detail': {\n                'type': 'to_active',\n                'data': { 'workflow_state': state }\n              }\n            });\n            if (window.location.href == \"https://privacy.samsung.com/my-data\"){\n              window.dispatchEvent(event('started'));\n            } else {\n              window.dispatchEvent(event('start-failed'));\n            }",
+                        "context": "website",
+                        "description": "",
+                        "disableBlock": false,
+                        "everyNewTab": false,
+                        "preloadScripts": [],
+                        "runBeforeLoad": false,
+                        "timeout": 20000
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "LV9PNNPS3f86nR002CG_W-output-1",
+                            "position": "right",
+                            "x": 195.98560618493326,
+                            "y": 28.010571419121376,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "LV9PNNPS3f86nR002CG_W-input-1",
+                            "position": "left",
+                            "x": -19.999099175206,
+                            "y": 28.010571419121376,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "LV9PNNPS3f86nR002CG_W",
+                      "label": "javascript-code",
+                      "position": {
+                        "x": 601.7672282384569,
+                        "y": 183.36293626183948
+                      },
+                      "selected": true,
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 880,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "data": {
+                        "description": "Sie sind in EU\nSie könne",
+                        "disableBlock": false,
+                        "findBy": "xpath",
+                        "markEl": false,
+                        "multiple": false,
+                        "selector": "//BODY/DIV[1]/DIV[1]/MAIN[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]",
+                        "waitForSelector": true,
+                        "waitSelectorTimeout": 5000
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "u0ra7v3X2bzu_LEHrAJis-output-1",
+                            "position": "right",
+                            "x": 196.01505279073456,
+                            "y": 28.010571419121376,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "u0ra7v3X2bzu_LEHrAJis-input-1",
+                            "position": "left",
+                            "x": -19.99920703823091,
+                            "y": 28.010571419121376,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "u0ra7v3X2bzu_LEHrAJis",
+                      "label": "event-click",
+                      "position": {
+                        "x": 880,
+                        "y": 300
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 1160,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "data": {
+                        "active": false,
+                        "customUserAgent": false,
+                        "description": "Neuer Tab",
+                        "disableBlock": false,
+                        "inGroup": false,
+                        "updatePrevTab": false,
+                        "url": "https://www.europe-samsung.com/gdpr/webform/de",
+                        "userAgent": "",
+                        "waitTabLoaded": false
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "fNbA7TEYK7pysRzm0XdCV-output-1",
+                            "position": "right",
+                            "x": 195.98560618493326,
+                            "y": 28.010571419121376,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "fNbA7TEYK7pysRzm0XdCV-input-1",
+                            "position": "left",
+                            "x": -19.999099175206,
+                            "y": 28.010571419121376,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "fNbA7TEYK7pysRzm0XdCV",
+                      "label": "new-tab",
+                      "position": {
+                        "x": 1160,
+                        "y": 300
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 1440,
+                        "y": 300,
+                        "z": 0
+                      },
+                      "data": {
+                        "description": "",
+                        "disableBlock": false,
+                        "findBy": "xpath",
+                        "markEl": false,
+                        "multiple": false,
+                        "selector": "//BODY/FORM[1]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/P[2]/INPUT[1]",
+                        "waitForSelector": true,
+                        "waitSelectorTimeout": 5000
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "0dvZfUVe4h-ePxqFHJQOF-output-1",
+                            "position": "right",
+                            "x": 196.01494492770965,
+                            "y": 28.010571419121376,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "0dvZfUVe4h-ePxqFHJQOF-input-1",
+                            "position": "left",
+                            "x": -19.999314901255826,
+                            "y": 28.010571419121376,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "0dvZfUVe4h-ePxqFHJQOF",
+                      "label": "event-click",
+                      "position": {
+                        "x": 1440,
+                        "y": 300
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 50,
+                        "y": 450,
+                        "z": 0
+                      },
+                      "data": {
+                        "active": false,
+                        "customUserAgent": false,
+                        "description": "",
+                        "disableBlock": false,
+                        "inGroup": false,
+                        "updatePrevTab": true,
+                        "url": "https://www.europe-samsung.com/gdpr/webform/de/sua",
+                        "userAgent": "",
+                        "waitTabLoaded": false
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "o4k6zGTLGRuEM2w5iOSNO-output-1",
+                            "position": "right",
+                            "x": 195.98560618493326,
+                            "y": 28.010571419121376,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "o4k6zGTLGRuEM2w5iOSNO-input-1",
+                            "position": "left",
+                            "x": -19.999099175206,
+                            "y": 28.010571419121376,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "o4k6zGTLGRuEM2w5iOSNO",
+                      "label": "new-tab",
+                      "position": {
+                        "x": 50,
+                        "y": 450
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 330,
+                        "y": 450,
+                        "z": 0
+                      },
+                      "data": {
+                        "description": "Auskunftsrecht",
+                        "disableBlock": false,
+                        "findBy": "xpath",
+                        "markEl": false,
+                        "multiple": false,
+                        "selector": "//BODY/FORM[1]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/SELECT[1]/OPTION[2]",
+                        "waitForSelector": true,
+                        "waitSelectorTimeout": 5000
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "sY6DlkdBJ60extX9-OdRL-output-1",
+                            "position": "right",
+                            "x": 195.98549832190835,
+                            "y": 28.010571419121376,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "sY6DlkdBJ60extX9-OdRL-input-1",
+                            "position": "left",
+                            "x": -19.999099175206,
+                            "y": 28.010571419121376,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "sY6DlkdBJ60extX9-OdRL",
+                      "label": "event-click",
+                      "position": {
+                        "x": 330,
+                        "y": 450
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 610,
+                        "y": 450,
+                        "z": 0
+                      },
+                      "data": {
+                        "assignVariable": false,
+                        "clearValue": true,
+                        "dataColumn": "",
+                        "delay": 100,
+                        "description": "",
+                        "disableBlock": false,
+                        "events": [],
+                        "findBy": "xpath",
+                        "getValue": false,
+                        "markEl": false,
+                        "multiple": false,
+                        "optionPosition": "1",
+                        "saveData": false,
+                        "selectOptionBy": "value",
+                        "selected": true,
+                        "selector": "//BODY/FORM[1]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[5]/DIV[1]/DIV[1]/DIV[1]/TEXTAREA[1]",
+                        "type": "text-field",
+                        "value": "Ich möchte eine Kopie meiner Daten gem. Art. 15 DSGVO beantragen.",
+                        "variableName": "",
+                        "waitForSelector": true,
+                        "waitSelectorTimeout": 5000
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "bBQCkaR2tHZqmFAXoWYnw-output-1",
+                            "position": "right",
+                            "x": 196.01494492770965,
+                            "y": 28.010571419121376,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "bBQCkaR2tHZqmFAXoWYnw-input-1",
+                            "position": "left",
+                            "x": -19.99920703823091,
+                            "y": 28.010571419121376,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "bBQCkaR2tHZqmFAXoWYnw",
+                      "label": "forms",
+                      "position": {
+                        "x": 610,
+                        "y": 450
+                      },
+                      "selected": false,
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 890,
+                        "y": 450,
+                        "z": 0
+                      },
+                      "data": {
+                        "description": "",
+                        "disableBlock": false,
+                        "findBy": "xpath",
+                        "markEl": false,
+                        "multiple": false,
+                        "selector": "//BODY/FORM[1]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[13]/INPUT[1]",
+                        "waitForSelector": true,
+                        "waitSelectorTimeout": 5000
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "aeQHI76wNgMbmZnGLFBNY-output-1",
+                            "position": "right",
+                            "x": 195.98549832190835,
+                            "y": 28.010571419121376,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "aeQHI76wNgMbmZnGLFBNY-input-1",
+                            "position": "left",
+                            "x": -19.99920703823091,
+                            "y": 28.010571419121376,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "aeQHI76wNgMbmZnGLFBNY",
+                      "label": "event-click",
+                      "position": {
+                        "x": 890,
+                        "y": 450
+                      },
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 1170,
+                        "y": 450,
+                        "z": 0
+                      },
+                      "data": {
+                        "assignVariable": false,
+                        "clearValue": true,
+                        "dataColumn": "",
+                        "delay": 100,
+                        "description": "Telefonnummer (User Interaction)",
+                        "disableBlock": false,
+                        "events": [],
+                        "findBy": "xpath",
+                        "getValue": false,
+                        "markEl": false,
+                        "multiple": false,
+                        "optionPosition": "1",
+                        "saveData": false,
+                        "selectOptionBy": "value",
+                        "selected": true,
+                        "selector": "//BODY/FORM[1]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[9]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/INPUT[1]",
+                        "type": "text-field",
+                        "value": "",
+                        "variableName": "",
+                        "waitForSelector": true,
+                        "waitSelectorTimeout": 5000
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "OAmcXKOFat5rdCUTxvQbM-output-1",
+                            "position": "right",
+                            "x": 196.01494492770965,
+                            "y": 28.010571419121376,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "OAmcXKOFat5rdCUTxvQbM-input-1",
+                            "position": "left",
+                            "x": -19.999099175206,
+                            "y": 28.010571419121376,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "OAmcXKOFat5rdCUTxvQbM",
+                      "label": "forms",
+                      "position": {
+                        "x": 1170,
+                        "y": 450
+                      },
+                      "selected": false,
+                      "type": "BlockBasic"
+                    },
+                    {
+                      "computedPosition": {
+                        "x": 330,
+                        "y": 600,
+                        "z": 0
+                      },
+                      "data": {
+                        "code": "const event = new CustomEvent( '__js-event__', {\n  'detail': {\n    'type': 'to_active',\n    'data': { 'workflow_state': 'interaction-needed' }\n  }\n});\nwindow.dispatchEvent(event);",
+                        "context": "website",
+                        "description": "",
+                        "disableBlock": false,
+                        "everyNewTab": false,
+                        "preloadScripts": [],
+                        "runBeforeLoad": false,
+                        "timeout": 20000
+                      },
+                      "dimensions": {
+                        "width": 192,
+                        "height": 72
+                      },
+                      "handleBounds": {
+                        "source": [
+                          {
+                            "id": "B0ztcyu-MpBZzZQHDQzTe-output-1",
+                            "position": "right",
+                            "x": 195.98549832190835,
+                            "y": 28.010571419121376,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ],
+                        "target": [
+                          {
+                            "id": "B0ztcyu-MpBZzZQHDQzTe-input-1",
+                            "position": "left",
+                            "x": -19.999099175206,
+                            "y": 28.010571419121376,
+                            "width": 16,
+                            "height": 16
+                          }
+                        ]
+                      },
+                      "id": "B0ztcyu-MpBZzZQHDQzTe",
+                      "label": "javascript-code",
+                      "position": {
+                        "x": 330,
+                        "y": 600
+                      },
+                      "selected": false,
+                      "type": "BlockBasic"
+                    }
+                  ],
+                  "edges": [
+                    {
+                      "id": "zMW5vnCLbl4x6pNhS6V3F",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "O9c23I6ypOqUEyPTLxOcx",
+                      "sourceHandle": "O9c23I6ypOqUEyPTLxOcx-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "FC_xDLVjHs9LvU82gXFTX",
+                      "targetHandle": "FC_xDLVjHs9LvU82gXFTX-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "-x4Z7YkIKde4TgThIWsl1",
+                      "class": "connected-edges",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "FC_xDLVjHs9LvU82gXFTX",
+                      "sourceHandle": "FC_xDLVjHs9LvU82gXFTX-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "LV9PNNPS3f86nR002CG_W",
+                      "targetHandle": "LV9PNNPS3f86nR002CG_W-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "IiWMon8-8PWz6Vfg076a8",
+                      "class": "source-u0ra7v3X2bzu_LEHrAJis-output-1 targte-fNbA7TEYK7pysRzm0XdCV-input-1",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "u0ra7v3X2bzu_LEHrAJis",
+                      "sourceHandle": "u0ra7v3X2bzu_LEHrAJis-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "fNbA7TEYK7pysRzm0XdCV",
+                      "targetHandle": "fNbA7TEYK7pysRzm0XdCV-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "PUMK5fb2D8tQI8A9RB9ZX",
+                      "class": "source-fNbA7TEYK7pysRzm0XdCV-output-1 targte-0dvZfUVe4h-ePxqFHJQOF-input-1",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "fNbA7TEYK7pysRzm0XdCV",
+                      "sourceHandle": "fNbA7TEYK7pysRzm0XdCV-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "0dvZfUVe4h-ePxqFHJQOF",
+                      "targetHandle": "0dvZfUVe4h-ePxqFHJQOF-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "QaJSVloakZH_Ki0LEWk5f",
+                      "class": "source-0dvZfUVe4h-ePxqFHJQOF-output-1 targte-o4k6zGTLGRuEM2w5iOSNO-input-1",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "0dvZfUVe4h-ePxqFHJQOF",
+                      "sourceHandle": "0dvZfUVe4h-ePxqFHJQOF-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "o4k6zGTLGRuEM2w5iOSNO",
+                      "targetHandle": "o4k6zGTLGRuEM2w5iOSNO-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "LeaFWsfFj0nybCpfJqFM5",
+                      "class": "source-o4k6zGTLGRuEM2w5iOSNO-output-1 targte-sY6DlkdBJ60extX9-OdRL-input-1",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "o4k6zGTLGRuEM2w5iOSNO",
+                      "sourceHandle": "o4k6zGTLGRuEM2w5iOSNO-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "sY6DlkdBJ60extX9-OdRL",
+                      "targetHandle": "sY6DlkdBJ60extX9-OdRL-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "iXaPMKefTwyXq5ZQLQkSp",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "sY6DlkdBJ60extX9-OdRL",
+                      "sourceHandle": "sY6DlkdBJ60extX9-OdRL-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "bBQCkaR2tHZqmFAXoWYnw",
+                      "targetHandle": "bBQCkaR2tHZqmFAXoWYnw-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "iVmMn7Ob91xUv_zlrDA3j",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "bBQCkaR2tHZqmFAXoWYnw",
+                      "sourceHandle": "bBQCkaR2tHZqmFAXoWYnw-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "aeQHI76wNgMbmZnGLFBNY",
+                      "targetHandle": "aeQHI76wNgMbmZnGLFBNY-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "j_zqI2voqXuDj78_nJMlj",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "aeQHI76wNgMbmZnGLFBNY",
+                      "sourceHandle": "aeQHI76wNgMbmZnGLFBNY-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "OAmcXKOFat5rdCUTxvQbM",
+                      "targetHandle": "OAmcXKOFat5rdCUTxvQbM-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "vueflow__edge-OAmcXKOFat5rdCUTxvQbMOAmcXKOFat5rdCUTxvQbM-output-1-B0ztcyu-MpBZzZQHDQzTeB0ztcyu-MpBZzZQHDQzTe-input-1",
+                      "markerEnd": "arrowclosed",
+                      "selectable": true,
+                      "source": "OAmcXKOFat5rdCUTxvQbM",
+                      "sourceHandle": "OAmcXKOFat5rdCUTxvQbM-output-1",
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "target": "B0ztcyu-MpBZzZQHDQzTe",
+                      "targetHandle": "B0ztcyu-MpBZzZQHDQzTe-input-1",
+                      "targetX": 0,
+                      "targetY": 0,
+                      "type": "custom",
+                      "updatable": true,
+                      "z": 0
+                    },
+                    {
+                      "id": "vueflow__edge-FC_xDLVjHs9LvU82gXFTXFC_xDLVjHs9LvU82gXFTX-output-1-u0ra7v3X2bzu_LEHrAJisu0ra7v3X2bzu_LEHrAJis-input-1",
+                      "source": "FC_xDLVjHs9LvU82gXFTX",
+                      "sourceHandle": "FC_xDLVjHs9LvU82gXFTX-output-1",
+                      "target": "u0ra7v3X2bzu_LEHrAJis",
+                      "targetHandle": "u0ra7v3X2bzu_LEHrAJis-input-1",
+                      "class": "source-FC_xDLVjHs9LvU82gXFTX-output-1 target-u0ra7v3X2bzu_LEHrAJis-input-1",
+                      "updatable": true,
+                      "type": "custom",
+                      "selectable": true,
+                      "markerEnd": "arrowclosed",
+                      "z": 0,
+                      "sourceX": 0,
+                      "sourceY": 0,
+                      "targetX": 0,
+                      "targetY": 0
+                    }
+                  ],
+                  "position": [
+                    122,
+                    207
+                  ],
+                  "zoom": 0.5658578661424806
+                },
+                "globalData": "{\n\t\"key\": \"value\"\n}",
+                "icon": "riGlobalLine",
+                "id": "AdZwdsL19ys4MjkKQOwz5",
+                "isDisabled": false,
+                "name": "Samsung",
+                "settings": {
+                  "blockDelay": 0,
+                  "debugMode": false,
+                  "defaultColumnName": "column",
+                  "execContext": "popup",
+                  "executedBlockOnWeb": false,
+                  "inputAutocomplete": true,
+                  "insertDefaultColumn": false,
+                  "notification": true,
+                  "onError": "stop-workflow",
+                  "publicId": "",
+                  "restartTimes": 3,
+                  "reuseLastState": false,
+                  "saveLog": true
+                },
+                "table": [],
+                "trigger": {
+                  "activeInInput": false,
+                  "contextMenuName": "",
+                  "contextTypes": [],
+                  "date": "",
+                  "days": [],
+                  "delay": 5,
+                  "description": "",
+                  "disableBlock": false,
+                  "interval": 60,
+                  "isUrlRegex": false,
+                  "observeElement": {
+                    "baseElOptions": {
+                      "attributeFilter": [],
+                      "attributes": false,
+                      "characterData": false,
+                      "childList": true,
+                      "subtree": false
+                    },
+                    "baseSelector": "",
+                    "matchPattern": "",
+                    "selector": "",
+                    "targetOptions": {
+                      "attributeFilter": [],
+                      "attributes": false,
+                      "characterData": false,
+                      "childList": true,
+                      "subtree": false
+                    }
+                  },
+                  "parameters": [],
+                  "shortcut": "",
+                  "time": "00:00",
+                  "type": "manual",
+                  "url": ""
+                },
+                "updatedAt": 1674517909166,
+                "version": "1.23.4.1"
+              }
+            ],
+            "version": 0,
+            "verified": true
+          }
+        }
+      },
+      {
+        "api": {
+          "available": false
+        }
+      }
+    ],
+    "requestParameter": {
+      "timeRange": {
+        "allTime": true,
+        "customRange": {
+          "available": false
+        }
+      },
+      "mediaQuality": [
+        "medium"
+      ],
+      "dataFormat": [
+        "CSV"
+      ]
+    },
+    "createdAt": "2023-02-15T11:34:36.155000Z",
+    "updatedAt": "2023-02-15T11:34:36.155000Z"
+  }
